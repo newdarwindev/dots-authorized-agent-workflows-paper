@@ -1,40 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Authorized Agent Workflows: a technical position paper and Beamer presentation on valuable, permitted agent work.">
-  <title>Authorized Agent Workflows</title>
-  <style>
-    :root { color-scheme: light; --ink:#17324d; --teal:#147d72; --line:#cbdadf; --paper:#f7faf9; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { max-width:980px; margin:auto; padding:clamp(24px,5vw,72px); }
-    .eyebrow { color:var(--teal); text-transform:uppercase; letter-spacing:.14em; font-size:.76rem; font-weight:750; }
-    h1 { font-size:clamp(2.8rem,7vw,5.2rem); line-height:1.02; letter-spacing:-.055em; margin:.65rem 0 1.2rem; }
-    .lede { max-width:760px; font-size:clamp(1.1rem,2.2vw,1.35rem); line-height:1.5; }
-    .files { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:3rem 0; }
-    .file { background:white; border:1px solid var(--line); border-radius:12px; padding:24px; box-shadow:0 3px 14px #17324d0b; }
-    .file h2 { margin:.2rem 0 .55rem; font-size:1.3rem; }
-    .file p { margin:0 0 1.2rem; color:#40576a; }
-    a.button { display:inline-block; background:var(--ink); color:white; border-radius:6px; padding:.65rem 1rem; font-weight:650; text-decoration:none; }
-    a.button:hover, a.button:focus { background:var(--teal); }
-    a.text { color:#086c64; text-underline-offset:3px; }
-    section { border-top:1px solid var(--line); padding-top:1.4rem; margin-top:2.5rem; }
-    h3 { margin-bottom:.4rem; }
-    footer { color:#526a78; font-size:.85rem; margin-top:3.5rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Aftermarket Imperative: a 20-page research position paper and 10-slide Beamer briefing on aftermarket harness engineering for frontier AI products.">
+<title>The Aftermarket Imperative — newdarwindev</title>
+<style>
+:root{color-scheme:light;--ink:#172638;--blue:#2563a6;--teal:#007f7a;--amber:#c27a23;--muted:#5d6d7d;--line:#d8e0e7;--pale:#f1f5f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font:17px/1.58 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+main{max-width:1060px;margin:auto;padding:clamp(28px,5vw,72px)}.eyebrow{color:var(--teal);font-size:.77rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{max-width:850px;margin:.55rem 0 1.15rem;font:700 clamp(3.3rem,8vw,6.5rem)/.98 Georgia,"Times New Roman",serif;letter-spacing:-.055em}.subtitle{max-width:770px;font-size:clamp(1.2rem,2.6vw,1.55rem);line-height:1.4;color:#31485b}.rule{display:flex;height:7px;margin:2.8rem 0;max-width:850px}.rule span:nth-child(1){width:28%;background:var(--blue)}.rule span:nth-child(2){width:28%;background:var(--amber)}.rule span:nth-child(3){flex:1;background:var(--teal)}
+.claim{max-width:850px;font:400 clamp(1.4rem,3vw,1.9rem)/1.45 Georgia,serif}.claim strong{color:var(--teal)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin:3rem 0}.card{border:1px solid var(--line);background:var(--pale);padding:28px 30px;min-height:220px}.card .number{color:var(--teal);font-size:.78rem;font-weight:800;letter-spacing:.12em}.card h2{margin:.55rem 0 .3rem;font:700 1.65rem Georgia,serif}.card p{color:var(--muted);margin:.35rem 0 1.4rem}.button{display:inline-block;padding:.65rem 1.05rem;background:var(--ink);color:#fff;border-radius:4px;font-weight:700;text-decoration:none}.button:hover{background:var(--teal)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;border-top:1px solid var(--line);padding-top:2rem;margin-top:3rem}.grid h2{font:700 1.45rem Georgia,serif;margin:0 0 .4rem}.grid p{margin:.4rem 0;color:#425568}.source{border-top:1px solid var(--line);padding-top:1.3rem;margin-top:2.6rem;color:var(--muted);font-size:.93rem}footer{margin-top:4rem;color:var(--muted);font-size:.85rem}@media(max-width:650px){.grid{grid-template-columns:1fr;gap:24px}}
+</style>
 </head>
 <body><main>
-  <div class="eyebrow">Technical position paper · October 2026</div>
-  <h1>Authorized Agent<br>Workflows</h1>
-  <p class="lede">A research agenda for turning general models into systems that finish valuable, owner-authorized work across accounts, APIs, browsers, and human checkpoints.</p>
-  <div class="files">
-    <article class="file"><h2>Whitepaper</h2><p>20 pages. Thesis, task model, architecture, evaluation protocol, counterarguments, and research agenda.</p><a class="button" href="paper.pdf">Read the paper (PDF)</a></article>
-    <article class="file"><h2>Presentation</h2><p>10 Beamer slides. A compact briefing on the argument, boundaries, and proposed tests.</p><a class="button" href="deck.pdf">View the slides (PDF)</a></article>
-  </div>
-  <section><h3>The central claim</h3><p>For some teams outside frontier labs, the largest near-term commercial research opportunity may be in the workflow around the model: permission, credential custody, durable state, human handoff, and verification. This is an argued hypothesis. The paper specifies comparisons that could disprove it.</p></section>
-  <section><h3>Research boundary</h3><p>The work concerns legitimate owner-authorized tasks and permitted platform routes. A correct denial is an outcome; missing authorization or a platform restriction is not a prompt-engineering challenge. The paper reports no deployed system, benchmark result, or return-on-investment estimate.</p></section>
-  <section><h3>Editable sources</h3><p>Read the <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper">repository</a> for <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/paper.tex">paper.tex</a>, <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/deck.tex">deck.tex</a>, BibTeX references, and the reusable TikZ figure. <a class="text" href="source-commit.txt">Published source commit</a>.</p></section>
-  <footer>Author: newdarwindev · Built from TeX sources in GitHub Actions</footer>
+<div class="eyebrow">Position paper · October 2026 · newdarwindev</div>
+<h1>The Aftermarket<br>Imperative</h1>
+<p class="subtitle">Unlocking the work frontier AI will not do by default</p>
+<div class="rule" aria-hidden="true"><span></span><span></span><span></span></div>
+<p class="claim">The commercial frontier may lie between a model that can reason about a task and a product that can <strong>deliver an accepted result.</strong></p>
+<div class="cards">
+<article class="card"><div class="number">01 / PAPER</div><h2>Read the argument</h2><p>20 pages on the delivery gap, hidden nudging labor, specialist economics and a falsifiable research protocol.</p><a class="button" href="paper.pdf">Download paper PDF</a></article>
+<article class="card"><div class="number">02 / BEAMER</div><h2>Present the thesis</h2><p>10 editable-source slides distilling the opportunity, boundaries, comparison and commercial test.</p><a class="button" href="deck.pdf">Download slides PDF</a></article>
+</div>
+<div class="grid"><section><h2>The position</h2><p>Aftermarket harness engineering may be the highest-leverage commercial research agenda for some teams outside frontier labs: make consumer frontier AI finish valuable, legitimate tasks it now declines or leaves to repeated user steering. This is a defended hypothesis, not an established market ranking.</p></section><section><h2>The test</h2><p>Compare stock products, skilled nudging, deterministic software and a same-model harness on the same authorized tasks and independent acceptance rule. Count human time, failures, support and maintenance. A proper refusal or platform restriction remains a boundary.</p></section></div>
+<p class="source">The <a href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper">public repository</a> contains <a href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/paper.tex">paper.tex</a>, <a href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/deck.tex">deck.tex</a>, BibTeX references and seven editable figures. <a href="source-commit.txt">View the exact published source commit.</a> The work reports no new benchmark, deployed system or return on investment.</p>
+<footer>Built from TeX and Beamer sources by GitHub Actions.</footer>
 </main></body></html>

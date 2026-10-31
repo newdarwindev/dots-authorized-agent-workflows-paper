@@ -1,38 +1,36 @@
-# Authorized Agent Workflows
+# The Aftermarket Imperative
 
-An original technical position paper and Beamer briefing for applied AI researchers, product engineers, and founders.
+An original 20-page position paper and 10-slide Beamer presentation by newdarwindev. Both PDFs and all TeX/BibTeX sources are public and editable.
 
-- [Published landing page](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/)
-- [20-page whitepaper](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf)
-- [10-slide presentation](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf)
+- [Landing page](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/)
+- [Paper PDF](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf)
+- [Beamer PDF](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf)
 
-The paper argues that owner-authorized workflow engineering around general models may be a major commercial research opportunity. It distinguishes capability, integration, authorization, product/safety policy, and third-party platform restrictions. The superlative version of the thesis is a hypothesis to test, not an empirical finding. No prototype, benchmark result, ROI, or savings claim is asserted.
+## Argument
 
-## Source map
+The paper argues that a high-leverage commercial research opportunity for some teams outside frontier laboratories is **aftermarket harness engineering**: making consumer-accessible frontier AI products complete valuable, legitimate work they currently decline or leave unfinished without repeated user nudging. The saleable unit is an independently accepted task result. The claim that this is the *greatest* opportunity is an argued hypothesis, not an empirical ranking.
 
-- `paper.tex` — complete manuscript
-- `deck.tex` — editable Beamer presentation
-- `references.bib` — cited primary papers and official documentation
-- `figures/architecture.tex` — reusable editable TikZ architecture figure
-- `docs/index.html` — GitHub Pages landing page
-- `.github/workflows/publish.yml` — public standard-runner PDF build, length validation, and Pages deployment
+An observed stop can reflect limited model capability, missing product context or tools, missing authority, a proper safety refusal, or a platform restriction. The proposed research separates these causes and compares stock products, expert nudging, conventional automation, and a same-model aftermarket harness. It accounts for human effort, verification, exceptions, maintenance, and provider improvements. Credential connection, enrollment, and authorized defensive work are brief illustrations, not proposed bypasses. The paper reports no new benchmark, deployed prototype, market size, or return on investment.
 
-## Local build
+## Sources
 
-With Tectonic 0.16.9 or a compatible XeLaTeX toolchain:
+- `paper.tex` and `sections/*.tex`: manuscript
+- `deck.tex`: Beamer slides
+- `references.bib`: primary papers and official reports
+- `figures/*.tex`: seven editable TikZ, PGFPlots, and Forest figures
+- `docs/index.html`: GitHub Pages landing page
+- `.github/workflows/publish.yml`: pinned standard-runner build and Pages publication
+
+## Build locally
+
+Tectonic 0.16.9 or a compatible XeLaTeX toolchain is required. From the repository root:
 
 ```sh
 mkdir -p build
 tectonic -X compile paper.tex --outdir build
 tectonic -X compile deck.tex --outdir build
-pdfinfo build/paper.pdf | grep Pages
-pdfinfo build/deck.pdf | grep Pages
+pdfinfo build/paper.pdf | grep Pages   # 20
+pdfinfo build/deck.pdf | grep Pages    # 10
 ```
 
-The GitHub workflow uses a pinned LaTeX action, TeX Live 2025, `ubuntu-24.04` standard hosted runners, and pinned Pages actions. It verifies the PDF lengths before publishing. No external credentials, paid runners, or repository secrets are required.
-
-## Scope and evidence
-
-The architecture is illustrative. Credential storage, account enrollment, and publication are framed as permissioned workflows with human handoff. The paper does not propose circumventing site controls, altering model safeguards, or using credentials without the owner's authority. Historical benchmarks inform the evaluation method, not current market estimates.
-
-The sources are newly authored text and TikZ. Bibliography entries link to public papers and official documentation. A `source-commit.txt` file on Pages identifies the exact commit that produced the live PDFs.
+The public GitHub Actions workflow uses the standard `ubuntu-24.04` runner, TeX Live 2025, pinned actions, and a pinned PDF parser. It verifies the page and slide counts before Pages deployment, then writes the producing commit to [source-commit.txt](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/source-commit.txt). No repository secrets or paid runner are required.

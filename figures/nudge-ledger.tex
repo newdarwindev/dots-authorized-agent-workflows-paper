@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=.92cm,y=1cm,>=Latex]
+\draw[ink!25,line width=.7pt] (0,2.05)--(12,2.05);
+\draw[ink!25,line width=.7pt] (0,.35)--(12,.35);
+\node[anchor=east,font=\small\bfseries,text=ochre] at (-.15,2.05) {Manual nudging};
+\node[anchor=east,font=\small\bfseries,text=teal] at (-.15,.35) {Harness};
+\foreach \x in {0.5,2.7,4.9,7.1,9.3,11.5}{\fill[ochre] (\x,2.05) circle (2.5pt);}
+\foreach \x in {0.5,5.0,9.5,11.5}{\fill[teal] (\x,.35) circle (2.5pt);}
+\node[font=\scriptsize,align=center,text=ink] at (.5,2.56) {Request};
+\node[font=\scriptsize,align=center,text=ink] at (2.7,2.56) {Reframe};
+\node[font=\scriptsize,align=center,text=ink] at (4.9,2.56) {Supply\\context};
+\node[font=\scriptsize,align=center,text=ink] at (7.1,2.56) {Move state\\by hand};
+\node[font=\scriptsize,align=center,text=ink] at (9.3,2.56) {Approve};
+\node[font=\scriptsize,align=center,text=ink] at (11.5,2.56) {Verify};
+\node[font=\scriptsize,align=center,text=ink] at (.5,-.20) {Request};
+\node[font=\scriptsize,align=center,text=ink] at (5,-.20) {Harness resolves\\routine friction};
+\node[font=\scriptsize,align=center,text=ink] at (9.5,-.20) {Approve};
+\node[font=\scriptsize,align=center,text=ink] at (11.5,-.20) {Verified};
+\node[font=\scriptsize,text=ochre] at (6.1,1.42) {User-active touches};
+\node[font=\scriptsize,text=teal] at (6.3,.85) {Automated state and exception handling};
+\end{tikzpicture}

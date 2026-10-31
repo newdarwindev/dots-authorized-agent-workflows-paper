@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+\fill[ink] (0,4.4) rectangle (12.7,5.0);
+\node[anchor=west,text=white,font=\small\bfseries] at (.22,4.7) {Same held-out tasks and acceptance rule; different intervention};
+\fill[ink!7] (0,0.65) rectangle (2.25,4.1);
+\node[text=ink,font=\small\bfseries,align=center] at (1.12,2.6) {Held-out\\task pool};
+\node[text=ink!70,font=\scriptsize,align=center] at (1.12,1.8) {Same starting state\\and consent};
+\fill[ink!7] (10.55,.65) rectangle (12.7,4.1);
+\node[text=ink,font=\small\bfseries,align=center] at (11.63,2.6) {Independent\\verifier};
+\node[text=ink!70,font=\scriptsize,align=center] at (11.63,1.8) {Same terminal\\condition};
+\def\testrow#1#2#3#4{
+  \fill[#3!13] (3.05,#1-.31) rectangle (9.75,#1+.31);
+  \draw[#3,line width=.9pt] (3.05,#1-.31)--(3.05,#1+.31);
+  \node[anchor=west,text=ink,font=\small\bfseries] at (3.25,#1) {#2};
+  \node[anchor=east,text=ink!70,font=\scriptsize] at (9.5,#1) {#4};
+  \draw[->,ink!50,line width=.55pt] (2.25,#1)--(3.0,#1);
+  \draw[->,ink!50,line width=.55pt] (9.80,#1)--(10.5,#1);
+}
+\testrow{3.65}{Stock consumer product}{native}{No extra intervention}
+\testrow{2.83}{Expert nudging}{ochre}{Prompting and manual transfer}
+\testrow{2.01}{Deterministic integration}{ink}{Conventional automation}
+\testrow{1.19}{Aftermarket harness}{teal}{Productized context and control}
+\node[anchor=west,text=ink!75,font=\scriptsize] at (.05,.2) {Record: accepted outcome $\cdot$ user-active minutes $\cdot$ latency $\cdot$ full cost $\cdot$ failure cause $\cdot$ repeatability};
+\end{tikzpicture}

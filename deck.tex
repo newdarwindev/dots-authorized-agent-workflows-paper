@@ -1,200 +1,192 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,booktabs,amsmath}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,fit,calc}
-\definecolor{Ink}{HTML}{17324D}
-\definecolor{Accent}{HTML}{147D72}
-\definecolor{Soft}{HTML}{E8F2F1}
-\definecolor{NavyBlue}{HTML}{17324D}
-\definecolor{ForestGreen}{HTML}{147D72}
-\setbeamercolor{normal text}{fg=Ink,bg=white}
-\setbeamercolor{frametitle}{fg=Ink,bg=white}
-\setbeamercolor{structure}{fg=Accent}
-\setbeamercolor{block title}{fg=white,bg=Ink}
-\setbeamercolor{block body}{fg=Ink,bg=Soft}
+\usepackage{newpxtext,newpxmath,microtype}
+\usepackage{tikz,booktabs}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\definecolor{ink}{HTML}{172638}
+\definecolor{native}{HTML}{2563A6}
+\definecolor{teal}{HTML}{007F7A}
+\definecolor{ochre}{HTML}{C27A23}
+\definecolor{rust}{HTML}{A24740}
+\definecolor{pale}{HTML}{F1F5F8}
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{frametitle}{fg=ink,bg=white}
+\setbeamercolor{structure}{fg=teal}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{\hfill\scriptsize Authorized Agent Workflows\hspace{1em}\insertframenumber/10\hspace{1.4em}\vspace{0.65em}}
-\setbeamertemplate{itemize item}{\color{Accent}$\blacktriangleright$}
-\setbeamertemplate{itemize subitem}{\color{Accent}$\bullet$}
-\setlength{\leftmargini}{1.5em}
-\title{Authorized Agent Workflows}
-\subtitle{A research agenda for valuable, permitted work}
+\setbeamertemplate{footline}{\hfill\color{ink!65}\scriptsize THE AFTERMARKET IMPERATIVE\quad\insertframenumber/10\hspace{1.2em}\vspace{.65em}}
+\setbeamertemplate{itemize item}{\color{teal}\small$\blacktriangleright$}
+\newcommand{\eyebrow}[1]{\textcolor{teal}{\textsf{\scriptsize\bfseries #1}}\par\vspace{.18cm}}
+\newcommand{\takeaway}[1]{\vfill\colorbox{pale}{\parbox{.96\linewidth}{\vspace{.17cm}\textbf{#1}\vspace{.17cm}}}}
+\title{The Aftermarket Imperative}
 \author{newdarwindev}
 \date{October 2026}
 \begin{document}
 
 \begin{frame}[plain]
-\vspace{0.6cm}
-{\color{Accent}\Large POSITION PAPER}\par\vspace{0.7cm}
-{\Huge\bfseries Authorized Agent\\Workflows}\par\vspace{0.35cm}
-{\Large A research agenda for valuable, permitted work}\par\vfill
-{\small newdarwindev \quad | \quad October 2026}\par\vspace{0.5cm}
-\end{frame}
-
-\begin{frame}{A strong thesis, stated as a hypothesis}
-\begin{block}{Commercial proposition}
-For some teams outside frontier labs, the largest near-term research opportunity may be turning general models into systems that complete valuable, owner-authorized tasks across real accounts and services.
-\end{block}
-\vspace{0.25cm}
-\begin{itemize}
-\item The model may know the next step while the product lacks a permitted execution path.
-\item Research target: verified task outcomes, including handoff and recovery.
-\item ``Greatest'' requires comparison with stronger models, ordinary software, and vertical products.
-\end{itemize}
+\vspace{.65cm}
+\eyebrow{POSITION PAPER / OCTOBER 2026}
+{\fontsize{32}{36}\selectfont\bfseries The Aftermarket\\Imperative}\par
+\vspace{.35cm}
+{\Large Unlocking the work frontier AI will not do by default}\par
 \vfill
-{\tiny Motivation: Zhou et al., WebArena (2023); Drouin et al., WorkArena (2024). Historical benchmarks are not current market estimates.}
+\begin{tikzpicture}
+\fill[native] (0,0) rectangle (3.5,.10);
+\fill[ochre] (3.5,0) rectangle (7,.10);
+\fill[teal] (7,0) rectangle (11.8,.10);
+\end{tikzpicture}\par\vspace{.2cm}
+{\small newdarwindev}
 \end{frame}
 
-\begin{frame}{First diagnose why a task stopped}
+\begin{frame}{The saleable unit is finished work}
+\eyebrow{01 / THESIS}
+{\Large Consumer frontier AI can describe valuable work yet leave the user to carry it across tools, time and verification.}\par
+\vspace{.42cm}
+\begin{columns}[T]
+\begin{column}{.47\linewidth}
+\textcolor{native}{\bfseries Default product}\par
+Reasoning, drafts, partial action, and observed stops.
+\end{column}
+\begin{column}{.47\linewidth}
+\textcolor{teal}{\bfseries Aftermarket harness}\par
+Task contract, permitted reach, persistence, exception handling and proof.
+\end{column}
+\end{columns}
+\takeaway{Hypothesis: for some non-frontier teams, closing this delivery gap is the highest-leverage commercial research agenda.}
+\end{frame}
+
+\begin{frame}{An observed “no” is a diagnosis problem}
+\eyebrow{02 / BOUNDARY}
 \small
-\begin{tabular}{p{0.24\linewidth}p{0.66\linewidth}}
+\begin{tabular}{p{.28\linewidth}p{.62\linewidth}}
 \toprule
-Cause & Appropriate response\\\midrule
-Capability & Improve perception, reasoning, or planning.\\
-Integration & Add a reliable API, tool, browser adapter, or durable state.\\
-Authorization & Ask the owner or administrator for a specific grant.\\
-Policy refusal & Record a product or safety denial; preserve the boundary.\\
-Platform restriction & Use an allowed route or human operation; stop if neither exists.\\\bottomrule
+Observed cause & Research or product response\\\midrule
+Model cannot do it & Better capability or a narrower task\\
+Missing context or tool & Supply permitted information and execution path\\
+Missing authorization & Ask the owner for a specific grant or approval\\
+Proper policy or platform stop & Stop, use an allowed route, or hand off\\\bottomrule
+\end{tabular}\par
+\vspace{.38cm}
+{\large A refusal is product behavior. It does not prove hidden model capability.}
+\takeaway{The addressable wedge is legitimate work recovered under the same acceptance rule.}
+\end{frame}
+
+\begin{frame}{Nudging is hidden labor}
+\eyebrow{03 / USER EFFORT}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[ink!25,line width=1pt] (1,2.45)--(11.7,2.45);
+\draw[ink!25,line width=1pt] (1,.75)--(11.7,.75);
+\node[anchor=east,text=ochre,font=\small\bfseries] at (.8,2.45) {Today};
+\node[anchor=east,text=teal,font=\small\bfseries] at (.8,.75) {Harness};
+\foreach \x/\t in {1/Ask,3/Reframe,5/Find context,7/Transfer,9/Approve,11/Check}{\fill[ochre] (\x,2.45) circle(3pt);\node[font=\scriptsize,align=center] at (\x,2.92) {\t};}
+\foreach \x/\t in {1/Ask,7/Managed work,9/Approve,11/Verified}{\fill[teal] (\x,.75) circle(3pt);\node[font=\scriptsize,align=center] at (\x,.25) {\t};}
+\end{tikzpicture}\par
+\vspace{.25cm}
+The goal is to remove repeated tactical steering while retaining decisions that genuinely belong to a person.
+\takeaway{Measure user-active minutes and repair work, not just model calls.}
+\end{frame}
+
+\begin{frame}{A harness is a translation contract}
+\eyebrow{04 / MECHANISM}
+\begin{tabular}{p{.18\linewidth}p{.7\linewidth}}
+\textcolor{teal}{\bfseries Specify} & Convert intent into an observable goal and allowed route.\\[.35cm]
+\textcolor{teal}{\bfseries Reach} & Bind permitted context, tools and accounts to the task.\\[.35cm]
+\textcolor{teal}{\bfseries Persist} & Carry state across waits, retries and exceptions.\\[.35cm]
+\textcolor{teal}{\bfseries Prove} & Verify external effect; report human work and uncertainty.\\
 \end{tabular}
-\vfill
-\begin{block}{Scoring rule}
-A filled form, draft, or click is progress. Completion requires the requested remote state, permission, and evidence.
-\end{block}
+\takeaway{The base model can stay fixed while the delivery system changes.}
 \end{frame}
 
-\begin{frame}{Model the goal, authority, and remote state}
-\large
-\[T=(g,E,A,P,B)\]
-\normalsize
-Goal $g$; environment $E$; authority record $A$; policy $P$; budget $B$.
-\vspace{0.35cm}
+\begin{frame}{Where a specialist might win}
+\eyebrow{05 / MARKET ENTRY}
 \begin{columns}[T]
-\begin{column}{0.48\linewidth}
-\begin{block}{Executable action}
-Technically available \emph{and} permitted for this principal, resource, scope, purpose, and time.
-\end{block}
-\end{column}
-\begin{column}{0.48\linewidth}
-\begin{block}{Successful task}
-Goal reached \emph{and} action path authorized \emph{and} outcome independently verified.
-\end{block}
-\end{column}
-\end{columns}
-\vspace{0.3cm}
-An external timeout can leave the outcome \textbf{unknown}. Reconcile before retrying a write.
-\end{frame}
-
-\begin{frame}{Proposed system boundary}
-\centering
-\resizebox{0.92\linewidth}{!}{\input{figures/architecture.tex}}
-\vspace{0.45cm}
+\begin{column}{.49\linewidth}
+\textcolor{teal}{\bfseries Look for}\par\vspace{.12cm}
 \begin{itemize}
-\item Planner sees bounded capabilities; policy and credentials live outside its context.
-\item Durable workflow records intent, approval, effect evidence, and uncertainty.
-\item Public components such as OpenBao and Temporal are illustrative, not a measured deployment.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Credentials: custody is part of the research}
-\begin{columns}[T]
-\begin{column}{0.5\linewidth}
-\textbf{Minimum viable boundary}
-\begin{itemize}
-\item Owner grants a scoped API token or approved session.
-\item Broker binds retrieval to task, principal, tool, and destination.
-\item Adapter uses the credential; model and logs never receive its value.
+\item Recurring, valuable task families
+\item Fragmented permitted context
+\item Observable acceptance states
+\item Exceptions worth productizing
 \end{itemize}
 \end{column}
-\begin{column}{0.46\linewidth}
-\begin{block}{Two distinctions}
-Vault storage does not make a website password dynamically revocable. Browser authentication state can impersonate its owner.
-\end{block}
+\begin{column}{.49\linewidth}
+\textcolor{rust}{\bfseries Be skeptical when}\par\vspace{.12cm}
+\begin{itemize}
+\item A stable API solves it directly
+\item Human judgment is the core work
+\item Access or permission is absent
+\item Support consumes the margin
+\end{itemize}
 \end{column}
 \end{columns}
-\vfill
-{\tiny Sources: OpenBao lease/database documentation; Playwright authentication documentation.}
+\vspace{.3cm}
+Credentials, enrollment and authorized defensive work are examples of workflow friction, not proof of a market.
 \end{frame}
 
-\begin{frame}{Enrollment and publishing need explicit handoff}
-\small
+\begin{frame}{Run the comparison that can fail the thesis}
+\eyebrow{06 / EXPERIMENT}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \y/\c/\t in {3.2/native/Stock product,2.35/ochre/Expert nudging,1.5/ink/Deterministic integration,.65/teal/Aftermarket harness}{
+\fill[\c!13] (2.3,\y-.28) rectangle (9.0,\y+.28);
+\draw[\c,line width=1.2pt] (2.3,\y-.28)--(2.3,\y+.28);
+\node[anchor=west,font=\small\bfseries] at (2.55,\y) {\t};
+\draw[-{Latex},ink!55] (1.65,\y)--(2.2,\y);
+\draw[-{Latex},ink!55] (9.1,\y)--(9.65,\y);
+}
+\node[align=center,font=\small\bfseries] at (.7,1.9) {Same\\tasks};
+\node[align=center,font=\small\bfseries] at (10.5,1.9) {Same\\verifier};
+\end{tikzpicture}
+\takeaway{Match tasks, permissions and acceptance rules; match the model in stock and harness arms.}
+\end{frame}
+
+\begin{frame}{Count accepted outcomes, not fluent attempts}
+\eyebrow{07 / ECONOMICS}
+\begin{center}
+{\Large\bfseries Cost per accepted task}\par\vspace{.15cm}
+{\large $=\dfrac{\text{model + tools + human time + support + maintenance}}{\text{independently accepted completions}}$}
+\end{center}
+\vspace{.4cm}
 \begin{columns}[T]
-\begin{column}{0.49\linewidth}
-\textbf{Account enrollment}
+\begin{column}{.46\linewidth}
+\textbf{Keep separate}\par
+Completed / pending / unknown / correctly stopped.
+\end{column}
+\begin{column}{.46\linewidth}
+\textbf{Expose displacement}\par
+Owner minutes, reviewer minutes, vendor operations and recovery.
+\end{column}
+\end{columns}
+\takeaway{A harness can win technically and lose commercially.}
+\end{frame}
+
+\begin{frame}{The wedge has a moving boundary}
+\eyebrow{08 / DURABILITY}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[-{Latex},ink!65] (.5,.5)--(11.6,.5) node[below left,font=\scriptsize]{Time};
+\draw[-{Latex},ink!65] (.5,.5)--(.5,3.9);
+\draw[teal,line width=2pt] (.8,2.0) .. controls (4,2.5) and (7.5,3.3) .. (11,3.35);
+\draw[ochre,line width=2pt] (.8,2.0) .. controls (4,2.15) and (7.5,2.1) .. (11,1.9);
+\draw[rust,line width=2pt] (.8,2.0) .. controls (4,1.8) and (7.5,.9) .. (11,.8);
+\node[anchor=west,text=teal,font=\small\bfseries] at (6.6,3.58) {Domain advantage persists};
+\node[anchor=west,text=ochre,font=\small\bfseries] at (6.4,2.25) {Niche complements provider};
+\node[anchor=west,text=rust,font=\small\bfseries] at (6.0,1.64) {Provider absorbs the gap};
+\end{tikzpicture}\par
+\vspace{.1cm}
+\scriptsize Conceptual scenarios, not observed trajectories. Provider improvements can retire yesterday's scaffolding.
+\end{frame}
+
+\begin{frame}{The verdict must be earned}
+\eyebrow{09 / RESEARCH AGENDA}
 \begin{enumerate}
-\item Prepare owner-supplied fields.
-\item Pause for identity checks and binding acceptance.
-\item Verify the resulting account state.
+\item Recover permitted stops with the model held fixed.
+\item Reduce tactical nudging against a skilled operator.
+\item Show which harness components cause the gain.
+\item Retest after provider upgrades and on held-out services.
+\item Beat conventional software on full cost per accepted outcome.
 \end{enumerate}
-\end{column}
-\begin{column}{0.49\linewidth}
-\textbf{Social publication}
-\begin{enumerate}
-\item Identify account, audience, content, and approved route.
-\item Obtain specific content approval.
-\item Publish through a permitted API or hand off; verify the object.
-\end{enumerate}
-\end{column}
-\end{columns}
-\vspace{0.5cm}
-\begin{block}{Separate gates}
-Account authority, content approval, and platform permission are different facts. An OAuth token alone does not settle the last one.
-\end{block}
-\end{frame}
-
-\begin{frame}{Durability cannot promise exactly-once effects}
-\begin{itemize}
-\item A worker may retry after an external write succeeded but its completion report was lost.
-\item Reads are often safe to retry; public writes require effect reconciliation.
-\item Keep \textbf{unknown} as a real task state when the remote effect cannot be established.
-\end{itemize}
-\vspace{0.25cm}
-\begin{block}{Example: publish timeout}
-Query the remote object or ask the owner to reconcile before another submission. A blind retry can make a duplicate.
-\end{block}
+\vspace{.25cm}
+{\large\bfseries If those tests hold, the aftermarket is a serious commercial research frontier.}
 \vfill
-{\tiny Source: Temporal Activity Definition documentation.}
-\end{frame}
-
-\begin{frame}{Evaluate the authorized outcome, not the demo}
-\small
-\begin{columns}[T]
-\begin{column}{0.5\linewidth}
-\textbf{Matched baselines}
-\begin{itemize}
-\item Human-only process
-\item Deterministic integration
-\item Tool-only agent
-\item Same model + authority-aware workflow
-\end{itemize}
-\end{column}
-\begin{column}{0.48\linewidth}
-\textbf{Report}
-\begin{itemize}
-\item Verified authorized completion
-\item Human active minutes and elapsed time
-\item Duplicate effects, policy violations, unknowns
-\item Total cost per successful task
-\end{itemize}
-\end{column}
-\end{columns}
-\vspace{0.35cm}
-Use repeated trials and hold out sites, account configurations, and task templates. Correct denial is a valid outcome for a disallowed request.
-\vfill
-{\tiny Methods: $\tau$-bench (2024); Kapoor et al., AI Agents That Matter (2024).}
-\end{frame}
-
-\begin{frame}{The agenda is falsifiable}
-\small
-\begin{enumerate}
-\item Test whether orchestration improves verified completion with the model fixed.
-\item Measure whether external custody lowers exposure without excessive owner effort.
-\item Test whether handoff states reduce duplicates and false completion claims.
-\item Compare with stronger models and conventional software on value per engineering dollar.
-\end{enumerate}
-\vspace{0.3cm}
-\begin{block}{Open result}
-Frontier providers may solve the gap; deterministic software may win; secret custody may cost too much. The ``greatest opportunity'' claim survives only where matched evidence supports it.
-\end{block}
+{\tiny Sources and claim boundaries: see the companion paper and its bibliography. No new benchmark or market estimate is reported here.}
 \end{frame}
 \end{document}

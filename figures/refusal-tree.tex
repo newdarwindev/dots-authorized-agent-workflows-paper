@@ -1,0 +1,21 @@
+\begin{forest}
+for tree={
+  grow'=0,
+  anchor=west,
+  child anchor=west,
+  parent anchor=east,
+  edge={draw=ink!35,line width=.65pt},
+  l sep=15mm,s sep=5mm,
+  inner xsep=1pt,inner ysep=2pt,
+  align=left,
+  font=\small
+}
+[\textbf{Observed stop},text=ink
+  [\textcolor{rust}{\textbf{Correct boundary}}\\Policy or platform disallows the effect, text=ink]
+  [\textcolor{teal}{\textbf{Permitted task}},text=ink
+    [Capability gap\\Model cannot choose a reliable next step]
+    [Product gap\\Context{,} tool{,} session{,} or time is missing]
+    [Authority gap\\Owner has not granted the specific action]
+  ]
+]
+\end{forest}

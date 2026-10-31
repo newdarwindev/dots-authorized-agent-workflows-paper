@@ -1,0 +1,29 @@
+\section{The economics of accepted work}
+
+The wrong denominator can make an aftermarket harness look compelling. Token spend per attempt is easy to observe but says little about a workflow that requires owner nudging, remote verification, retries, and maintenance. We define the operating cost per successful authorized task in a cohort as
+\[
+C_{\mathrm{accepted}}=\frac{C_{\mathrm{model}}+C_{\mathrm{tools}}+C_{\mathrm{human}}+C_{\mathrm{verification}}+C_{\mathrm{maintenance}}+C_{\mathrm{recovery}}}{N_{\mathrm{verified\;authorized}}}.
+\]
+The denominator counts only terminal results that satisfy the predeclared goal and permission rule. The numerator includes failed attempts and cleanup. A system that makes more calls but needs less human repair may win; a cheaper call that produces more unverified results may lose. \citet{agentsmatter} argue for joint attention to cost and accuracy in agent evaluation, which motivates this accounting but does not supply an ROI estimate for the present proposal.
+
+The fixed cost of a specialist harness may dominate at low volume. Integration, customer onboarding, exception design, and evaluation must be paid for before the first accepted task. Manual nudging may be cheaper when the task is rare, even if it feels unpleasant. Figure~\ref{fig:amortization} depicts a possible crossing as volume grows. Its lines are schematic. A real business case needs measured setup cost, maintenance cadence, task mix, completion rate, and labor cost. The crossing may not exist for a given domain.
+
+\begin{figure}[tbp]
+\centering\input{figures/amortization.tex}
+\caption{Illustrative amortization of a specialist harness against repeated expert nudging. No axis values or break-even point are estimated. The question is whether a real task cohort produces such a crossing after failed attempts, verification and maintenance are counted.}
+\label{fig:amortization}
+\end{figure}
+
+Revenue capture is a separate problem from technical uplift. A customer might value fewer active minutes, faster completion, reduced rework, better audit evidence, or access to a previously unreachable workflow. These benefits should be measured at the customer level and priced without assuming all saved minutes become cash savings. A specialist may earn subscription revenue, per-completion fees, or integration fees; each model changes incentives. Per-attempt pricing rewards activity. Per-accepted-outcome pricing aligns with completion but can encourage narrow task selection or disputes about the verifier. The acceptance rule therefore belongs in the contract, not only in a research appendix.
+
+The opportunity is dynamic. A frontier provider can move a common harness feature into its own product; a platform can expose a better API; an existing SaaS vendor can add model reasoning; or a stronger model can remove the need for a particular scaffold. Anthropic's 2026 account of long-running application work notes that a newer model allowed the team to drop context-reset machinery that had mattered for an earlier model \citep{anthropic2026}. That is concrete evidence of scaffold obsolescence in one engineering context, not a forecast for all domains. Figure~\ref{fig:durability} maps three conceptual trajectories for an aftermarket niche.
+
+\begin{figure}[tbp]
+\centering\input{figures/durability-fan.tex}
+\caption{Conceptual trajectories for specialist opportunity as providers, platforms and customers learn. The curves are scenarios, not forecasts. Domain advantage can persist, narrow into a complement, or erode when native products absorb the gap or access closes.}
+\label{fig:durability}
+\end{figure}
+
+A durable vendor must therefore learn faster than the gap closes. Its defensible asset may be a task corpus, domain-specific acceptance tests, trusted integration, exception-handling operation, or customer distribution. None is guaranteed. Building a larger generic prompt wrapper while frontier providers improve their own agent systems is a weak bet. The researcher should compare two time periods: first, measure uplift over the current native product; second, repeat the same task suite after a provider upgrade. If the uplift collapses without a compensating service advantage, the business case is eroding even if the original experiment was valid.
+
+The productivity J-curve offers an additional caution: complementary investments may be needed before benefits appear in ordinary economic measures \citep{jcurve}. That does not license vague optimism. It means a study should record integration effort and the time path of outcomes instead of declaring a win from the first successful run. A commercially honest paper can present the possible surplus mechanism and the conditions under which it fails. The present paper has no measured prices, costs, refusal rates, or market sizes, so it makes no numerical claim about the size of the wedge.

@@ -37,11 +37,19 @@ jobs:
       - name: Verify exact lengths and text
         run: |
           set -euo pipefail
-          test "$(pdfinfo paper.pdf | awk '/^Pages:/ {print $2}')" = 20
-          test "$(pdfinfo deck.pdf | awk '/^Pages:/ {print $2}')" = 10
-          pdftotext paper.pdf - | grep -q 'Authorized Agent Workflows'
-          pdftotext deck.pdf - | grep -q 'Authorized Agent Workflows'
-          test "$(grep -c '\\begin{frame}' deck.tex)" = 10
+          python3 -m venv .verify-venv
+          .verify-venv/bin/python -m pip install --disable-pip-version-check pypdf==5.9.0
+          .verify-venv/bin/python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+
+          for filename, expected in (("paper.pdf", 20), ("deck.pdf", 10)):
+              pdf = PdfReader(filename)
+              print(f"{filename}: {len(pdf.pages)} pages")
+              assert len(pdf.pages) == expected, f"{filename} must have {expected} pages"
+              assert "Authorized Agent Workflows" in pdf.pages[0].extract_text(), filename
+          assert Path("deck.tex").read_text().count(r"\begin{frame}") == 10
+          PY
 
       - name: Stage site
         run: |

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Authorized Agent Workflows: a technical position paper and Beamer presentation on valuable, permitted agent work.">
+  <title>Authorized Agent Workflows</title>
+  <style>
+    :root { color-scheme: light; --ink:#17324d; --teal:#147d72; --line:#cbdadf; --paper:#f7faf9; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:980px; margin:auto; padding:clamp(24px,5vw,72px); }
+    .eyebrow { color:var(--teal); text-transform:uppercase; letter-spacing:.14em; font-size:.76rem; font-weight:750; }
+    h1 { font-size:clamp(2.8rem,7vw,5.2rem); line-height:1.02; letter-spacing:-.055em; margin:.65rem 0 1.2rem; }
+    .lede { max-width:760px; font-size:clamp(1.1rem,2.2vw,1.35rem); line-height:1.5; }
+    .files { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:3rem 0; }
+    .file { background:white; border:1px solid var(--line); border-radius:12px; padding:24px; box-shadow:0 3px 14px #17324d0b; }
+    .file h2 { margin:.2rem 0 .55rem; font-size:1.3rem; }
+    .file p { margin:0 0 1.2rem; color:#40576a; }
+    a.button { display:inline-block; background:var(--ink); color:white; border-radius:6px; padding:.65rem 1rem; font-weight:650; text-decoration:none; }
+    a.button:hover, a.button:focus { background:var(--teal); }
+    a.text { color:#086c64; text-underline-offset:3px; }
+    section { border-top:1px solid var(--line); padding-top:1.4rem; margin-top:2.5rem; }
+    h3 { margin-bottom:.4rem; }
+    footer { color:#526a78; font-size:.85rem; margin-top:3.5rem; }
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">Technical position paper · October 2026</div>
+  <h1>Authorized Agent<br>Workflows</h1>
+  <p class="lede">A research agenda for turning general models into systems that finish valuable, owner-authorized work across accounts, APIs, browsers, and human checkpoints.</p>
+  <div class="files">
+    <article class="file"><h2>Whitepaper</h2><p>20 pages. Thesis, task model, architecture, evaluation protocol, counterarguments, and research agenda.</p><a class="button" href="paper.pdf">Read the paper (PDF)</a></article>
+    <article class="file"><h2>Presentation</h2><p>10 Beamer slides. A compact briefing on the argument, boundaries, and proposed tests.</p><a class="button" href="deck.pdf">View the slides (PDF)</a></article>
+  </div>
+  <section><h3>The central claim</h3><p>For some teams outside frontier labs, the largest near-term commercial research opportunity may be in the workflow around the model: permission, credential custody, durable state, human handoff, and verification. This is an argued hypothesis. The paper specifies comparisons that could disprove it.</p></section>
+  <section><h3>Research boundary</h3><p>The work concerns legitimate owner-authorized tasks and permitted platform routes. A correct denial is an outcome; missing authorization or a platform restriction is not a prompt-engineering challenge. The paper reports no deployed system, benchmark result, or return-on-investment estimate.</p></section>
+  <section><h3>Editable sources</h3><p>Read the <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper">repository</a> for <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/paper.tex">paper.tex</a>, <a class="text" href="https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/main/deck.tex">deck.tex</a>, BibTeX references, and the reusable TikZ figure. <a class="text" href="source-commit.txt">Published source commit</a>.</p></section>
+  <footer>Author: newdarwindev · Built from TeX sources in GitHub Actions</footer>
+</main></body></html>

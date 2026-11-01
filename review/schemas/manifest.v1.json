@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "enum": [
+        1
+      ]
+    },
+    "classification": {
+      "enum": [
+        "deterministic synthetic simulation"
+      ]
+    },
+    "parent_source_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "mock_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "descriptor_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fixture_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "protocol_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 18446744073709551615
+    },
+    "repeats": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "scenarios": {
+      "const": [
+        "fixture-A",
+        "fixture-B",
+        "missing-approval",
+        "wrong-workspace",
+        "revoked-approval",
+        "expired-approval",
+        "lost-confirmation",
+        "temporary-failure",
+        "corrupted-output",
+        "restart-recovery"
+      ]
+    },
+    "conditions": {
+      "const": [
+        "direct_script",
+        "automation",
+        "without_placement",
+        "without_recovery"
+      ]
+    },
+    "run_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tools": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "go": {
+          "type": "string"
+        },
+        "python": {
+          "type": "string"
+        },
+        "php": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "go",
+        "python",
+        "php"
+      ]
+    },
+    "timing_definition": {
+      "type": "string"
+    },
+    "order_algorithm": {
+      "enum": [
+        "paired-sha256-v1"
+      ]
+    },
+    "ci": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "repository": {
+              "enum": [
+                "newdarwindev/dots-paper-workflow-mock"
+              ]
+            },
+            "run_id": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "run_attempt": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "run_url": {
+              "type": "string",
+              "pattern": "^https://github.com/newdarwindev/dots-paper-workflow-mock/actions/runs/[0-9]+$"
+            },
+            "commit_sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            }
+          },
+          "required": [
+            "repository",
+            "run_id",
+            "run_attempt",
+            "run_url",
+            "commit_sha"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "validation": {
+      "enum": [
+        "passed"
+      ]
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 8,
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "classification",
+    "parent_source_sha",
+    "mock_sha",
+    "descriptor_sha256",
+    "fixture_sha256",
+    "protocol_sha256",
+    "seed",
+    "repeats",
+    "scenarios",
+    "conditions",
+    "run_at",
+    "tools",
+    "timing_definition",
+    "order_algorithm",
+    "ci",
+    "validation",
+    "files"
+  ]
+}

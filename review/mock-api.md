@@ -42,7 +42,7 @@ The private repository preserves `review/fleet-fixture.json` from paper commit `
 
 Ten cases × five independent resets × four conditions produce 200 scheduled synthetic trials. Every trial uses actual loopback HTTP and temporary on-disk SQLite databases. Reports retain accepted results, stops, failures, unknowns, placement/recovery counts and observed timings. Human effort and actual costs remain unmeasured. The direct script is a synthetic comparison condition, not a native-product baseline. The deliberately corrupted-output case must be rejected; its reported failure is an expected acceptance check.
 
-Local race tests, OpenAPI examples/live responses, restart persistence, concurrent duplicate prevention, authorization and transaction rollback checks passed before the private commit was pushed. Private CI also executes the PHP walkthrough and retains synthetic reports. Its commit-specific run is [available to authorized readers](https://github.com/newdarwindev/dots-paper-workflow-mock/actions/runs/41273104108).
+The initial mock integration at `6f94dbc529630270638c6b4a240fd4671922ef17` passed race safety, live OpenAPI, persistence, authorization, duplicate prevention and PHP checks in this [historical private run (authorized access required)](https://github.com/newdarwindev/dots-paper-workflow-mock/actions/runs/41273104108). Current consumer verification at the new pin is recorded below.
 
 **Classification:** tested synthetic mock. Real fleet placement/enrollment/recovery, model comparisons, human-effort measurements and commercial claims remain unrun or unknown. The paper's measured two-host pilot is still proposed. V1 Argument remains the published-source default; paper/deck sources and their 20/10-page contracts are unchanged by this integration.
 
@@ -180,3 +180,34 @@ For a pre-consumer revision such as `4e02bab`, restore its pin/note and remove t
 new summary/contract and consumer CI steps together; that revision has no consumer
 snapshot. Never pair a later summary with an older mock pin. Six wontfix issues
 #45, #47, #49, #51, #53 and #54 remain excluded.
+
+## Delivered consumer verification
+
+**Deterministic synthetic simulation.** The [allowlisted summary](mock-summary.json)
+was exported from successful [private integration CI (authorized access required)](https://github.com/newdarwindev/dots-paper-workflow-mock/actions/runs/41276354261)
+after its archive digest and all functional/HTTP rows were independently verified.
+The executed parent source is `abba4e3ca812d14fa908053c9d701661493f945f` and the exact
+private source is `de0dd7de282ee5590cfbdd1bd00696c15f56538b`. This note and summary are committed
+later; their containing revision is recorded by the integration PR head.
+
+Private artifact `13071675554` (`parent-http-evidence`)
+expires **2026-11-15T05:20:56Z**. Availability was authenticated at
+`2026-11-01T05:21:57Z`; this is a historical observation, not a
+permanent availability claim. Archive SHA-256: `0345b3154094206dfcab537f5c1a989590834f6527b467f1e1d6ce8d5507fa0d`.
+Manifest SHA-256: `cfbe1b81d4421ace6be31fe62bd65a2b90eea3193820b2667b1a11afd04016c5`. After expiry the evidence is
+unavailable and must be regenerated using the commands above.
+
+The issue's previously checked items were rechecked against this implementation:
+
+| Item | Delivered check |
+|---|---|
+| AC01 | Exactly one D1–D10 choice, rationale and deferred work are recorded above. |
+| AC11 | Corruption is rejected; correct stops and unknown outcomes remain distinct in both complete reports. |
+| AC15 | The existing PHP example, role separation and final live API contract pass at the pinned private source. |
+| AC19 | Export schema/count/provenance checks pass; the unchanged paper and all three decks build and render at 20/10 pages without an initialized private submodule. |
+| AC20 | Private integration CI passes at the recorded source revisions. Final public PR CI validates the later summary commit; its run is linked in the PR. Reproduction/upgrade/rollback commands are above. |
+
+Missing/dirty/wrong dependencies, seed-identical ordering/results, controlled-clock
+boundaries, deadlines, readiness failures, occupied ports, interrupted services,
+cleanup and evidence tampering were exercised. The original fixture bytes and
+V1 Argument default are preserved; six wontfix issues remain untouched.

@@ -1,0 +1,145 @@
+{
+  "actual_cost": null,
+  "artifact": {
+    "availability_at_verification": "available",
+    "created_at": "2026-11-01T05:20:58Z",
+    "digest": "sha256:0345b3154094206dfcab537f5c1a989590834f6527b467f1e1d6ce8d5507fa0d",
+    "expires_at": "2026-11-15T05:20:56Z",
+    "id": 13071675554,
+    "name": "parent-http-evidence",
+    "repository": "newdarwindev/dots-paper-workflow-mock",
+    "run_id": 41276354261,
+    "verified_at": "2026-11-01T05:21:57Z"
+  },
+  "ci": {
+    "commit_sha": "de0dd7de282ee5590cfbdd1bd00696c15f56538b",
+    "repository": "newdarwindev/dots-paper-workflow-mock",
+    "run_attempt": 1,
+    "run_id": 41276354261,
+    "run_url": "https://github.com/newdarwindev/dots-paper-workflow-mock/actions/runs/41276354261"
+  },
+  "classification": "deterministic synthetic simulation",
+  "conditions": [
+    "direct_script",
+    "automation",
+    "without_placement",
+    "without_recovery"
+  ],
+  "descriptor_sha256": "e0a2e316396ffe791d9289781b923c11d2973cbc53d1c700d5c5c4f43994c73e",
+  "experiments": {
+    "functional": {
+      "automation": {
+        "accepted": 25,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 0
+      },
+      "direct_script": {
+        "accepted": 10,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 15
+      },
+      "without_placement": {
+        "accepted": 15,
+        "correctly_stopped": 30,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 15,
+        "scheduled": 50,
+        "unknown": 0
+      },
+      "without_recovery": {
+        "accepted": 10,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 15
+      }
+    },
+    "http": {
+      "automation": {
+        "accepted": 25,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 0
+      },
+      "direct_script": {
+        "accepted": 10,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 15
+      },
+      "without_placement": {
+        "accepted": 15,
+        "correctly_stopped": 30,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 15,
+        "scheduled": 50,
+        "unknown": 0
+      },
+      "without_recovery": {
+        "accepted": 10,
+        "correctly_stopped": 20,
+        "failed": 5,
+        "pending": 0,
+        "rejected_placements": 0,
+        "scheduled": 50,
+        "unknown": 15
+      }
+    }
+  },
+  "export_allowlist_version": 1,
+  "fixture_sha256": "c7438534cfc1b7f02607ac382fa255a0545406063872864540258316968e41c6",
+  "human_active_minutes": null,
+  "limitations": [
+    "Scripted synthetic actors; no model calls, native-product baseline, real-host or production evaluation.",
+    "direct_script has both workspaces; without_placement selects A and stops on mismatches; without_recovery omits recovery.",
+    "Accepted deliveries require independent review. Correct stops, rejected output, pending and unknown outcomes remain separate.",
+    "Corrupted output is an expected acceptance failure. Scheduled denominators include every trial.",
+    "Faults skipped by placement stops are not injected. Recovery eligibility excludes corruption; no public recovery rate is claimed.",
+    "Service timings and detailed verification records remain private. Functional timings include setup and teardown.",
+    "Human effort, actual cost, ROI and commercial advantage are unknown. The real-host pilot remains proposed.",
+    "Private Actions artifacts expire after 14 days; historical success does not establish current evidence availability."
+  ],
+  "manifest_sha256": "cfbe1b81d4421ace6be31fe62bd65a2b90eea3193820b2667b1a11afd04016c5",
+  "mock_sha": "de0dd7de282ee5590cfbdd1bd00696c15f56538b",
+  "parent_source_sha": "abba4e3ca812d14fa908053c9d701661493f945f",
+  "protocol_sha256": "cef93a1935df073bdf4760471b20fdc157e845950000e255aba357e142173947",
+  "repeats": 5,
+  "report_sha256": {
+    "functional/evaluation.json": "544f494cb97c69c0afe8fe9b249c95e2f064c5a529ececdc2fec2b78d79a18e9",
+    "functional/trials.csv": "b4f4f31589d79fc3c331f41b8cddcb0a38164612aca6f82541f4a912a7511ab4",
+    "http-report.json": "d3749b633c083a38e2a45ccc315077800df357287c398b8c3e5ad4907587b561"
+  },
+  "run_at": "2026-11-01T05:20:52Z",
+  "scenarios": [
+    "fixture-A",
+    "fixture-B",
+    "missing-approval",
+    "wrong-workspace",
+    "revoked-approval",
+    "expired-approval",
+    "lost-confirmation",
+    "temporary-failure",
+    "corrupted-output",
+    "restart-recovery"
+  ],
+  "schema_version": 1,
+  "seed": 63
+}

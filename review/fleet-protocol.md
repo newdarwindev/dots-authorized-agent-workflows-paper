@@ -9,6 +9,7 @@ The figure is figures/fleet-evaluation.tex; the preview is deck-fleet.tex.
 | --- | --- | --- |
 | Editable diagram and ten-slide deck | Tested build | Local PDF checks and PR CI; see validation record |
 | Synthetic refinery UI | Prototype | Public ecd6c3e screenshot and authored tests; not rerun here |
+| Business API and automation mock | Tested synthetic mock | Private Go/SQLite submodule; [scope and protocol mapping](mock-api.md); no real hosts or models |
 | Fleet placement, enrollment, recovery | Planned | Proposed protocol and sanitized fixture only |
 | Production fleet or commercial advantage | Unknown | No runtime or commercial measurements |
 
@@ -23,6 +24,8 @@ dated documentation reference, not a fresh audit of current native platform
 limits. This layer does not modify those limits. Compare tasks feasible in both
 arms under equal task-level grants; report tasks unavailable to the baseline
 as coverage differences rather than baseline failures.
+
+The optional private mock now executes deterministic synthetic checks of the procedure below. It does not run the proposed real-host/model comparison; see [mock evidence limits](mock-api.md).
 
 ## Fixture and proposed acceptance procedure
 

@@ -107,6 +107,7 @@ class PureTests(unittest.TestCase):
             lambda d:d.update(mock_sha='0'*40),
             lambda d:d['experiments']['http']['automation'].update(accepted=999),
             lambda d:d['artifact'].update(run_id=1),
+            lambda d:d.update(run_at='invalid-date'),
             lambda d:d['limitations'].append('Unsupported claim'),
         ):
             d=copy.deepcopy(summary); mutate(d)
@@ -157,6 +158,10 @@ class HTTPTests(unittest.TestCase):
         case=self.descriptor['cases'][0]
         row=self.trial(case,'automation')
         c.check_evidence(row,case)
+        malformed=copy.deepcopy(row)
+        malformed['evidence']['approvals'][0]['expires_at']='invalid-date'
+        with self.assertRaisesRegex(c.Invalid,'schema'):
+            c.validate_schema(malformed,'trial-evidence')
         for mutate in (
             lambda r:r['evidence']['deliveries'][0].update(workspace_id='workspace-b'),
             lambda r:r['evidence']['downloads'][0].update(sha256='0'*64),

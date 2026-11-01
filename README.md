@@ -75,3 +75,17 @@ pdfinfo build/deck.pdf | grep Pages    # 10
 ```
 
 The public GitHub Actions workflow uses the standard `ubuntu-24.04` runner, TeX Live 2025, pinned actions, and a pinned PDF parser. It verifies the page and slide counts before Pages deployment, then writes the producing commit to [source-commit.txt](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/source-commit.txt). No repository secrets or paid runner are required.
+
+## Private business API mock
+
+The optional [`mock/`](https://github.com/newdarwindev/dots-paper-workflow-mock) Git submodule contains a private Go/SQLite application and automation API with business-facing resources, a PHP client guide, OpenAPI, and deterministic synthetic tests. Access to the private repository is required; the paper, deck and their public build remain independent of it.
+
+```sh
+# From an authorized checkout of this paper repository:
+git submodule update --init -- mock
+cd mock
+go test -race ./...
+go run ./cmd/evaluate -repeats 5 -seed 63 -out reports
+```
+
+The submodule pins a reviewed implementation commit; it does not follow the private repository's branch automatically. See [mock scope, setup and protocol mapping](review/mock-api.md). These checks test synthetic workflows and recovery; they do not establish real fleet capability, model performance or commercial advantage.

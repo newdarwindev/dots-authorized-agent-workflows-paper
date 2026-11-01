@@ -87,7 +87,7 @@ Original acceptance requirements (not certified passed):
 
 [Original issue](https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/5)
 
-Proposed: **D1-A**. Use one compact native Beamer claim/evidence/limitation treatment. This achieves the requested visual grammar without adding tcolorbox to the deck; the paper retains its existing boxes.
+Proposed: **D1-B**. Use one compact native Beamer claim/evidence/limitation treatment. This achieves the requested visual grammar without adding tcolorbox to the deck; the paper retains its existing boxes.
 
 - [ ] D1-A — Refine existing usage / evaluate proposed treatment
 - [ ] D1-B — Keep current approach / existing alternative
@@ -967,7 +967,7 @@ Original acceptance requirements (not certified passed):
 
 [Original issue](https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/56)
 
-Proposed: **D1-A**. Retain microtype for supported XeTeX protrusion. No claim of XeTeX font expansion or compensation for overcrowding.
+Proposed: **D1-B**. Retain microtype for supported XeTeX protrusion. No claim of XeTeX font expansion or compensation for overcrowding.
 
 - [ ] D1-A — Refine existing usage / evaluate proposed treatment
 - [ ] D1-B — Keep current approach / existing alternative

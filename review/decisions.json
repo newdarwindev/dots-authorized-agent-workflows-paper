@@ -111,7 +111,7 @@
         "type:ctan",
         "theme:layout"
       ],
-      "proposed": "D1-A",
+      "proposed": "D1-B",
       "rationale": "Use one compact native Beamer claim/evidence/limitation treatment. This achieves the requested visual grammar without adding tcolorbox to the deck; the paper retains its existing boxes.",
       "recommendation": "Use compact Claim / Artifact / Verified scope / Not yet tested cards on slides 2, 5 and 10. P1: these make proof boundaries visible. Reuse the paper dependency with unbreakable frame-sized boxes; avoid code libraries unless source is actually shown.",
       "sources": [],
@@ -1141,7 +1141,7 @@
         "visual:medium",
         "theme:typography"
       ],
-      "proposed": "D1-A",
+      "proposed": "D1-B",
       "rationale": "Retain microtype for supported XeTeX protrusion. No claim of XeTeX font expansion or compensation for overcrowding.",
       "recommendation": "Retain subtle spacing and edge improvements throughout the deck and paper. P0 preserves existing readability with minimal surface area. XeTeX supports protrusion, not font expansion; do not promise features of other engines or use microtype to compensate for overcrowding.",
       "sources": [],

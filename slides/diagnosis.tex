@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\small]
+\node[font=\small\bfseries,align=center] (stop) at (.8,1.5) {Observed\\stop};
+\foreach \y/\c/\label/\response in {
+3/rust/Correct boundary/Stop or use an allowed handoff,
+2/native/Capability gap/Narrow the task or improve capability,
+1/teal/Product gap/Supply permitted context or tools,
+0/ochre/Authority gap/Request the specific owner grant}{
+\node[anchor=west,text=\c,font=\small\bfseries] (n\y) at (2.4,\y) {\label};
+\node[anchor=west] at (6.3,\y) {\response};
+\draw[->,ink!40] (stop.east)--(n\y.west);
+}
+\end{tikzpicture}

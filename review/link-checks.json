@@ -1,0 +1,171 @@
+{
+  "checked_at": "2026-11-01T03:51:17.283419+00:00",
+  "scope": "HTTP HEAD reachability only, not content, CI, playback or runtime verification",
+  "results": [
+    {
+      "url": "https://github.com/newdarwindev/cloud-onboarding-demo",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/cloud-onboarding-demo"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/amortization.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/amortization.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/completion-wedge.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/completion-wedge.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/durability-fan.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/durability-fan.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/nudge-ledger.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/nudge-ledger.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/paired-test.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/paired-test.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/refusal-tree.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/refusal-tree.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/translation-contract.tex",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/translation-contract.tex"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-dspy-refinery-architecture",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-dspy-refinery-architecture"
+    },
+    {
+      "url": "https://github.com/newdarwindev/dots-workflow-refinery-demo/blob/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/tests/flow.spec.js",
+      "http": 200,
+      "final_url": "https://github.com/newdarwindev/dots-workflow-refinery-demo/blob/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/tests/flow.spec.js"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dot-status-demo/evidence/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dot-status-demo/evidence/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-browser-workflows-docs/#architecture",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-browser-workflows-docs/#architecture"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-prompt-tracker-public/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-prompt-tracker-public/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-repo-sitemap-public/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-repo-sitemap-public/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-slackdump-status/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-slackdump-status/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-presentation.pdf",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-presentation.pdf"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-white-paper.pdf",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-white-paper.pdf"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/storybook/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/storybook/"
+    },
+    {
+      "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/vision.html",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/vision.html"
+    },
+    {
+      "url": "https://newdarwindev.github.io/public-demo-template/evidence/",
+      "http": 200,
+      "final_url": "https://newdarwindev.github.io/public-demo-template/evidence/"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/review.png",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/review.png"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/workflow-walkthrough.webm",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/workflow-walkthrough.webm"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/01-identity.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/01-identity.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/02-lifecycle.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/02-lifecycle.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/03-approval.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/03-approval.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/04-golden-data.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/04-golden-data.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/05-control-planes.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/05-control-planes.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/06-constellation.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/06-constellation.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/07-provenance.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/07-provenance.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/08-observation.pdf",
+      "http": 200,
+      "final_url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/08-observation.pdf"
+    }
+  ]
+}

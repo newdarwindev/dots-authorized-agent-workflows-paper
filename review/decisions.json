@@ -1,0 +1,1278 @@
+{
+  "snapshot": "2026-11-01",
+  "base": "88b04652f828514f41c5b51aea44198631066ee0",
+  "excluded": [
+    45,
+    47,
+    49,
+    51,
+    53,
+    54
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "title": "Fleet product brief: dots-authorized-agent-workflows-paper positioning and decision matrix",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/1",
+      "category": "planning",
+      "labels": [
+        "type:planning",
+        "theme:architecture",
+        "priority:P1",
+        "fit:core",
+        "visual:high"
+      ],
+      "proposed": "D1-A / D2-A / D3-A",
+      "rationale": "Add a proposed two-host evaluation, explicitly authorized placement and independent receipts, sanitized fixtures, metric definitions and failure cases. All fleet execution remains unrun.",
+      "recommendation": "For slides 5/7, draw two explicitly authorized host lanes, placement, receipts and an independent verifier. This makes Specify/Reach/Persist/Prove concrete. It is an evaluation design, not evidence that a fleet is deployed or superior.",
+      "sources": [],
+      "placement": "Slides 5 and 7",
+      "boundary": "",
+      "verification": "Documented proposed test; do not claim a fleet experiment has run."
+    },
+    {
+      "number": 2,
+      "title": "[CTAN decision] beamer: Native frames, columns, templates, handout mode",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/2",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:layout"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Use the existing Beamer theme, dynamic total-frame counter, consistent evidence/limitation captions and no overlays.",
+      "recommendation": "Use the existing frame system for a consistent problem → decision → evidence → limitation layout across slides 1–10. P0 retains the foundation rather than adding a theme. Keep 16:9; overlays or appendix frames would violate the current fixed-page contract.",
+      "sources": [],
+      "placement": "**1–10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Verify 10 frames and exactly 10 output pages. Replace hard-coded total only if it preserves the same visual contract; overlays must not silently increase page count.\n- [ ] AC3 — Given the same ten-slide content, when rendered at presentation and read-alone sizes, then hierarchy, margins and evidence labels are consistent with no clipping, overcrowding or unreadably scaled text.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 3,
+      "title": "[Evidence decision] Aftermarket deck and companion paper",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/3",
+      "category": "evidence",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:verification",
+        "priority:P0"
+      ],
+      "proposed": "A",
+      "rationale": "Keep the ten-slide argument as the editorial spine; add a compact claim → evidence → limitation strip and clickable bibliography. Highest priority: protect the falsifiable thesis rather than add portfolio decoration. The 20-page paper reports no new benchmark, market estimate or ROI.",
+      "recommendation": "Keep the ten-slide argument as the editorial spine; add a compact claim → evidence → limitation strip and clickable bibliography. Highest priority: protect the falsifiable thesis rather than add portfolio decoration. The 20-page paper reports no new benchmark, market estimate or ROI.",
+      "sources": [
+        {
+          "title": "Aftermarket deck",
+          "url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf"
+        },
+        {
+          "title": "paper",
+          "url": "https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf"
+        }
+      ],
+      "placement": "1–10 · Beamer, natbib, hyperref",
+      "boundary": "Published source `88b0465`; position paper, **no new benchmark, market estimate or ROI**",
+      "verification": "- [ ] Verify the chosen paper/deck build SHA and page counts, retain bibliography, and label thesis/economics as hypotheses rather than personal achievements.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 4,
+      "title": "[CTAN decision] beamertheme-metropolis: Restrained presentation theme",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/4",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "theme:layout",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Keep the custom NewPX theme across the three full-deck comparisons. Metropolis adds a font/theme migration without resolving an evidence gap; revisit only after a typography comparison is requested.",
+      "recommendation": "Compare one restrained title/footer hierarchy on slides 1, 2 and 10 against the current theme. P2: an optional alternative, less important than missing evidence. Pin fonts; a theme change cannot substantiate claims.",
+      "sources": [],
+      "placement": "**1, 2, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Compare one render using the theme against the current custom theme. Pin fonts and select only one theme strategy; inspect all ten slides, not only the title.\n- [ ] AC3 — Given the same ten-slide content, when rendered at presentation and read-alone sizes, then hierarchy, margins and evidence labels are consistent with no clipping, overcrowding or unreadably scaled text.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 5,
+      "title": "[CTAN decision] tcolorbox: Reusable titled content boxes",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/5",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:layout"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Use one compact native Beamer claim/evidence/limitation treatment. This achieves the requested visual grammar without adding tcolorbox to the deck; the paper retains its existing boxes.",
+      "recommendation": "Use compact Claim / Artifact / Verified scope / Not yet tested cards on slides 2, 5 and 10. P1: these make proof boundaries visible. Reuse the paper dependency with unbreakable frame-sized boxes; avoid code libraries unless source is actually shown.",
+      "sources": [],
+      "placement": "**2, 5, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Render claim/evidence/limit cards containing the longest actual labels. Boxes stay within frame bounds and their visual statuses are not interchangeable.\n- [ ] AC3 — Given the same ten-slide content, when rendered at presentation and read-alone sizes, then hierarchy, margins and evidence labels are consistent with no clipping, overcrowding or unreadably scaled text.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 6,
+      "title": "[Evidence decision] Refinery acceptance tests and walkthrough",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/6",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:verification"
+      ],
+      "proposed": "A",
+      "rationale": "On slide 7 pair one readable gate/rollback assertion with a walkthrough still and source link. Four authored Playwright tests and a matching successful showcase build make bounded evidence inspectable; they do not demonstrate real DSPy training or model-quality gains.",
+      "recommendation": "On slide 7 pair one readable gate/rollback assertion with a walkthrough still and source link. Four authored Playwright tests and a matching successful showcase build make bounded evidence inspectable; they do not demonstrate real DSPy training or model-quality gains.",
+      "sources": [
+        {
+          "title": "Refinery test source",
+          "url": "https://github.com/newdarwindev/dots-workflow-refinery-demo/blob/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/tests/flow.spec.js"
+        },
+        {
+          "title": "walkthrough",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/workflow-walkthrough.webm"
+        }
+      ],
+      "placement": "7 · listings + linked video still",
+      "boundary": "Four authored Playwright tests; matching successful showcase build; **not real DSPy training or model-quality evaluation**",
+      "verification": "- [ ] Match shown assertions to pinned ecd6c3e test source. Sample selected video frame and record it as actual UI interaction, not DSPy execution; distinguish four authored tests from model experiments.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 7,
+      "title": "[CTAN decision] adjustbox: Size, trim and align boxed material",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/7",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "theme:layout",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use native graphicx width/height bounds and keepaspectratio; adjustbox is unnecessary for the verified layouts.",
+      "recommendation": "Align architecture diagrams and screenshots into equal-width, bounded-height panels on slides 5 and 7. P2: useful only if ordinary placement is insufficient. Check cropping and link targets; never shrink evidence text merely to fit more material.",
+      "sources": [],
+      "placement": "**5, 7**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Inspect the smallest text after adjustment. Reject a solution that merely fits by shrinking type; verify cropped links and labels remain usable.\n- [ ] AC3 — Given the same ten-slide content, when rendered at presentation and read-alone sizes, then hierarchy, margins and evidence labels are consistent with no clipping, overcrowding or unreadably scaled text.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 8,
+      "title": "[Evidence decision] Browser workflow architecture",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/8",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence"
+      ],
+      "proposed": "C",
+      "rationale": "Keep the portal/broker, Temporal, OpenBao and identity boundaries in a linked architecture reference; do not imply the offline checks establish full integration.",
+      "recommendation": "For slides 4–5 redraw the portal/broker → Temporal → browser path, with OpenBao and identity boundaries visually distinct. Strong mechanism fit, but show local synthetic checks separately from planned integrations; this is not proof of a deployed credential backend.",
+      "sources": [
+        {
+          "title": "Browser workflows architecture",
+          "url": "https://newdarwindev.github.io/dots-browser-workflows-docs/#architecture"
+        }
+      ],
+      "placement": "4–5 · TikZ component map + status cards",
+      "boundary": "Page distinguishes local synthetic checks from planned integrations; **not a deployed credential backend**",
+      "verification": "- [ ] Annotate each selected component as locally tested, synthetic or planned. Ensure the diagram never implies production credential storage or independently verified full integration.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 9,
+      "title": "[Evidence decision] Refinery review UI and screenshot",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/9",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:layout"
+      ],
+      "proposed": "A",
+      "rationale": "On slide 5 use a cropped review screenshot plus three callouts: redact, simulated evaluation, promotion/rollback. The UI is visually concrete and relevant to controlled workflows. Mark examples synthetic and 78%/92% invented demo values, not measured improvement.",
+      "recommendation": "On slide 5 use a cropped review screenshot plus three callouts: redact, simulated evaluation, promotion/rollback. The UI is visually concrete and relevant to controlled workflows. Mark examples synthetic and 78%/92% invented demo values, not measured improvement.",
+      "sources": [
+        {
+          "title": "Workflow refinery demo",
+          "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/"
+        },
+        {
+          "title": "review screenshot",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/artifacts/review.png"
+        }
+      ],
+      "placement": "5 · graphicx + tcolorbox",
+      "boundary": "Real UI, **synthetic examples and simulated evaluation**; 78%/92% are invented demo values",
+      "verification": "- [ ] Keep SYNTHETIC/DEMO labels legible in the cropped screenshot. Show review gate state accurately and label 78%/92% invented rather than performance gains.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 10,
+      "title": "[CTAN decision] pgf: TikZ vector diagrams",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/10",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:diagrams"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Reuse editable TikZ/PGF figures and add scoped host lanes, placement, receipts and verifier in the fleet option.",
+      "recommendation": "Deepen existing TikZ use: diagnostic tree on slide 3, human/system swimlanes on 4, contract-to-artifact map on 5, shared verifier on 7 and explicit outcome states on 8. P0: these clarify the thesis with no new diagram engine. Reuse styles; avoid externalization and do not imply deployed flows.",
+      "sources": [],
+      "placement": "**3, 4, 5, 7, 8, 9**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Review each arrow direction and legend against the source narrative. Reuse common styles and existing libraries, with no externalization requirement added.\n- [ ] AC3 — Given the documented boundaries and terminal states, when the diagram is read without narration, then every permitted transition, human checkpoint and stop is distinguishable; conceptual paths must not look like measured execution.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 11,
+      "title": "[Evidence decision] Refinery Storybook states and vision",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/11",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "theme:layout",
+        "priority:P2",
+        "visual:medium",
+        "fit:appendix"
+      ],
+      "proposed": "C",
+      "rationale": "Keep the six UI states in the linked Storybook, not six claimed workflows or extra core frames.",
+      "recommendation": "Use a six-state contact sheet with state names and links in a separate supplement, not six extra core slides. Useful interaction detail, lower thesis leverage than verification receipts. Six Storybook states are not six independently proven workflows; vision remains proposed.",
+      "sources": [
+        {
+          "title": "Refinery Storybook",
+          "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/storybook/"
+        },
+        {
+          "title": "vision",
+          "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/vision.html"
+        }
+      ],
+      "placement": "Evidence appendix · tabularray state matrix",
+      "boundary": "States/proposals, **not six independently proven workflows**",
+      "verification": "- [ ] Verify selected story ID against deployed index. Count six UI states, not workflows, and keep the vision's hypothetical refinement loop separate from implemented UI.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 12,
+      "title": "[CTAN decision] forest: Automatically packed trees",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/12",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:diagrams"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use existing TikZ for a boundary-first diagnostic tree with readable permitted responses. Keep Forest in the paper; no need to add it to the deck.",
+      "recommendation": "On slide 3, replace the four-row cause table with a boundary-first diagnostic tree if it reads better. P1: directly clarifies authorized recoverable stops. Reuse the paper dependency or plain TikZ; preserve mixed causes and legitimate stop/handoff branches, never an evasion route.",
+      "sources": [],
+      "placement": "**3**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Check the boundary-first branching against paper figure 2, preserve the distinction between product/capability/authority causes and allow mixed causes in the caption.\n- [ ] AC3 — Given the documented boundaries and terminal states, when the diagram is read without narration, then every permitted transition, human checkpoint and stop is distinguishable; conceptual paths must not look like measured execution.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 13,
+      "title": "[Evidence decision] Refinery paper and presentation",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/13",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:diagrams"
+      ],
+      "proposed": "C",
+      "rationale": "Link the original five-page concept paper and ten-slide deck; the main deck retains its own mechanism narrative.",
+      "recommendation": "Borrow at most one mechanism figure for slides 4–5/7 and link the five-page concept paper and ten-slide deck for detail. Avoid a second competing narrative. These are design explanations, not evidence of a live refinement platform.",
+      "sources": [
+        {
+          "title": "Refinery paper",
+          "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-white-paper.pdf"
+        },
+        {
+          "title": "deck",
+          "url": "https://newdarwindev.github.io/dots-workflow-refinery-demo/resources/workflow-refinery-presentation.pdf"
+        }
+      ],
+      "placement": "4–5, 7 · graphicx for existing vector figures",
+      "boundary": "Design explanations, not evidence of a live platform",
+      "verification": "- [ ] Map selected PDF pages/figures to their original sources; keep proposal legends and do not duplicate the detailed visual-family decisions below.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 14,
+      "title": "[Evidence decision] Dot-status visual evidence",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/14",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:verification"
+      ],
+      "proposed": "C",
+      "rationale": "Link the evidence gallery and its synthetic-telemetry limitation; omit uninspected videos from performance claims.",
+      "recommendation": "For slides 7/10 select one desktop/mobile evidence pair and link the gallery of eight screenshots and ten recordings. Show action → visible result → receipt, not a screenshot wall. Chromium interactions are real; telemetry is synthetic, with no uptime or pixel-diff claim.",
+      "sources": [
+        {
+          "title": "Dot-status evidence",
+          "url": "https://newdarwindev.github.io/dot-status-demo/evidence/"
+        }
+      ],
+      "placement": "7, 10 · evidence thumbnails and links",
+      "boundary": "Real Chromium interactions with **synthetic telemetry**; functional tests, not pixel-diff assertions or real uptime",
+      "verification": "- [ ] Match selected screenshot/video to deployed f3e75eef evidence gallery, preserve synthetic telemetry label, and distinguish functional interaction tests from pixel-diff testing.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 15,
+      "title": "[CTAN decision] pgf-umlsd: Sequence diagrams",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/15",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:diagrams"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use existing TikZ host lanes; a second sequence-diagram engine provides no required feature.",
+      "recommendation": "For slides 4–5, show an owner → broker → browser → verifier exchange with explicit human handoff only when the interaction is documented. P2: plain TikZ may be enough. This is a proposed sequence illustration, not evidence of a running integration.",
+      "sources": [],
+      "placement": "**4, 5**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Trace owner, broker, browser and verifier lifelines. Retained approval and unknown-result reconciliation must not disappear from the sequence.\n- [ ] AC3 — Given the documented boundaries and terminal states, when the diagram is read without narration, then every permitted transition, human checkpoint and stop is distinguishable; conceptual paths must not look like measured execution.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 16,
+      "title": "[Evidence decision] Completion-wedge visual",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/16",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:diagrams"
+      ],
+      "proposed": "A",
+      "rationale": "On slide 2 use the existing completion wedge with direct curve labels and a prominent hypothesis caption. It quickly explains the main delivery-gap thesis. Keep axes conceptual: no numeric lift, measured propensity or commercial success can be inferred.",
+      "recommendation": "On slide 2 use the existing completion wedge with direct curve labels and a prominent hypothesis caption. It quickly explains the main delivery-gap thesis. Keep axes conceptual: no numeric lift, measured propensity or commercial success can be inferred.",
+      "sources": [
+        {
+          "title": "TeX",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/completion-wedge.tex"
+        }
+      ],
+      "placement": "Slide 2 · hypothesized delivery gap",
+      "boundary": "Conceptual/design visual, not measured outcome. Slide 2 · hypothesized delivery gap",
+      "verification": "- [ ] Keep hypothesized completion wedge label visible. Do not introduce quantitative ticks or measured-superiority language for hand-authored curves.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 17,
+      "title": "[CTAN decision] booktabs: Readable table rules and spacing",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/17",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Retain booktabs, short wrapped tables and no vertical rules for evidence and outcome states.",
+      "recommendation": "Retain spacious, short acceptance/evidence tables without vertical rules on slides 3, 6–8 and 10. P0: readable comparisons support verification better than decoration. Do not squeeze the complete repository inventory onto a slide.",
+      "sources": [],
+      "placement": "**3, 6, 7, 8, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Check longest evidence and limitation cells. Use no misleading merged outcomes, no vertical-rule clutter, and no tiny scaled table.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 19,
+      "title": "[CTAN decision] tabularray: Declarative table widths, styles and cells",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/19",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use ordinary wrapped tabular/booktabs in the deck and a separate HTML artifact matrix; no need to add tabularray to Beamer.",
+      "recommendation": "Build a wrapped Artifact / Role / Evidence / Limitation matrix for slides 6, 7 or 10. P1: concrete evidence mapping is a mainline gap. Reuse the paper package only if simpler tabular is inadequate; target the pinned TeX Live 2025 version.",
+      "sources": [],
+      "placement": "**6, 7, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Compile with the pinned TeX Live 2025 package version. Compare wrapping and spacing with the existing tabular/booktabs alternative.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 20,
+      "title": "[Evidence decision] Refusal diagnosis tree",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/20",
+      "category": "evidence",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "priority:P0",
+        "theme:diagrams"
+      ],
+      "proposed": "A",
+      "rationale": "Slide 3 needs a compact diagnosis tree: incapacity, missing context/tool, missing authorization, or proper stop. Label each permitted response explicitly. This is central to the thesis and safety boundary; an observed refusal alone does not prove latent capability or justify bypassing a stop.",
+      "recommendation": "Slide 3 needs a compact diagnosis tree: incapacity, missing context/tool, missing authorization, or proper stop. Label each permitted response explicitly. This is central to the thesis and safety boundary; an observed refusal alone does not prove latent capability or justify bypassing a stop.",
+      "sources": [
+        {
+          "title": "TeX",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/refusal-tree.tex"
+        }
+      ],
+      "placement": "Slide 3 · boundary/cause diagnosis",
+      "boundary": "Conceptual/design visual, not measured outcome. Slide 3 · boundary/cause diagnosis",
+      "verification": "- [ ] Retain correct policy/platform boundary as a stop, distinguish capability/product/authority gaps, and do not imply bypass or hidden capability.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 21,
+      "title": "[CTAN decision] siunitx: Consistent numbers, units and aligned numeric columns",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/21",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "type:ctan",
+        "visual:medium",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer until a reviewed measurement export has real units, denominators and uncertainty. No numeric results are invented.",
+      "recommendation": "For slides 7–8, align verified counts, seconds, minutes, costs and uncertainty with consistent units. P1 is conditional on real measurements: no fabricated latency, success rate or ROI, and no implication that formatting validates data.",
+      "sources": [],
+      "placement": "**7, 8**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Verify number/unit formatting and alignment with missing values and uncertainty. Do not convert a missing measurement to zero.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 22,
+      "title": "[Evidence decision] Translation-contract visual",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/22",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "priority:P0"
+      ],
+      "proposed": "A",
+      "rationale": "Slide 5 should use four aligned Specify / Reach / Persist / Prove cards, each linked to an artifact and a limitation. This is the paper’s central mechanism, so clarity outranks ornamental changes. The contract is conceptual, not four shipped capabilities.",
+      "recommendation": "Slide 5 should use four aligned Specify / Reach / Persist / Prove cards, each linked to an artifact and a limitation. This is the paper’s central mechanism, so clarity outranks ornamental changes. The contract is conceptual, not four shipped capabilities.",
+      "sources": [
+        {
+          "title": "TeX",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/translation-contract.tex"
+        }
+      ],
+      "placement": "Slide 5 · four obligations",
+      "boundary": "Conceptual/design visual, not measured outcome. Slide 5 · four obligations",
+      "verification": "- [ ] Preserve all four obligations Specify/Reach/Persist/Prove and connect each to only the actual selected artifact's demonstrated scope.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 23,
+      "title": "[Evidence decision] Nudge-ledger visual",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/23",
+      "category": "evidence",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "priority:P0",
+        "theme:diagrams"
+      ],
+      "proposed": "A",
+      "rationale": "On slide 4 use parallel human/system swimlanes to expose reframing, context transfer, approval and checking. Preserve genuine human decisions while illustrating reduced tactical steering. Highest priority for the nudge-tax thesis; lane lengths are not measured minutes or claimed savings.",
+      "recommendation": "On slide 4 use parallel human/system swimlanes to expose reframing, context transfer, approval and checking. Preserve genuine human decisions while illustrating reduced tactical steering. Highest priority for the nudge-tax thesis; lane lengths are not measured minutes or claimed savings.",
+      "sources": [
+        {
+          "title": "TeX",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/nudge-ledger.tex"
+        }
+      ],
+      "placement": "Slide 4 · human/system responsibilities, not measured time",
+      "boundary": "Conceptual/design visual, not measured outcome. Slide 4 · human/system responsibilities, not measured time",
+      "verification": "- [ ] Keep owner approvals and final verification on both paths. Label touch reductions schematic, not measured user minutes saved.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 24,
+      "title": "[Evidence decision] Paired-comparison visual",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/24",
+      "category": "evidence",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:verification",
+        "priority:P0"
+      ],
+      "proposed": "A",
+      "rationale": "On slide 7 retain four comparable arms converging on one independent verifier: stock product, expert nudging, deterministic integration, harness. Make shared tasks/permissions visible and match stock/harness model versions. This is the falsification design, not a completed benchmark or ranking.",
+      "recommendation": "On slide 7 retain four comparable arms converging on one independent verifier: stock product, expert nudging, deterministic integration, harness. Make shared tasks/permissions visible and match stock/harness model versions. This is the falsification design, not a completed benchmark or ranking.",
+      "sources": [
+        {
+          "title": "TeX",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/paired-test.tex"
+        }
+      ],
+      "placement": "Slide 7 · shared tasks/verifier",
+      "boundary": "Conceptual/design visual, not measured outcome. Slide 7 · shared tasks/verifier",
+      "verification": "- [ ] Preserve same held-out tasks, permissions and independent acceptance rule across all four arms. Explicitly label experiment design rather than executed comparison.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 25,
+      "title": "[CTAN decision] pgfplots: Axes, curves, bars and uncertainty plots",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/25",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Reuse existing PGFPlots schematics with compat=1.18, nonnumeric axes, direct labels and distinct dash patterns.",
+      "recommendation": "Give slide 9 clearly labelled scenario curves with distinct line styles; use slide 8 plots only for sourced measurements. P1: clarify economics and durability without converting hypotheses into results. Retain compat=1.18 and “Conceptual—not measured”; no invented numeric trajectory ticks.",
+      "sources": [],
+      "placement": "**8, 9**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Retain compat=1.18 unless separately justified. Conceptual durability curves stay explicitly conceptual; measured plots need source data and denominator.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 26,
+      "title": "[Evidence decision] Economics and durability visuals",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/26",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:tables-metrics"
+      ],
+      "proposed": "A",
+      "rationale": "Slides 8–9 should pair the cost-per-accepted-outcome denominator with clearly labeled conceptual durability scenarios. Keep pending/unknown/correctly stopped separate from accepted completions. Strong thesis fit, but curves are not forecasts and no ROI or measured market advantage is established.",
+      "recommendation": "Slides 8–9 should pair the cost-per-accepted-outcome denominator with clearly labeled conceptual durability scenarios. Keep pending/unknown/correctly stopped separate from accepted completions. Strong thesis fit, but curves are not forecasts and no ROI or measured market advantage is established.",
+      "sources": [
+        {
+          "title": "Amortization",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/amortization.tex"
+        },
+        {
+          "title": "durability",
+          "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/blob/88b04652f828514f41c5b51aea44198631066ee0/figures/durability-fan.tex"
+        }
+      ],
+      "placement": "Slides 8–9 · hypotheses, no ROI or forecasts",
+      "boundary": "Conceptual/design visual, not measured outcome. Slides 8–9 · hypotheses, no ROI or forecasts",
+      "verification": "- [ ] Keep conceptual labels and distinct line styles. Show no measured ROI, break-even point, trajectory or forecast unless later separately sourced data supports it.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 27,
+      "title": "[CTAN decision] pgfplotstable: Load and format numerical evidence tables",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/27",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer numerical table loading until a versioned measured dataset exists; the review manifest is editorial metadata.",
+      "recommendation": "Generate short aggregate evidence tables for slides 7, 8 or 10 from one reviewed, versioned CSV. P2 until that export exists. Display provenance and cutoff beside values; the package neither verifies truth nor refreshes stale data.",
+      "sources": [],
+      "placement": "**7, 8, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Compare every output value with the reviewed input CSV, including missing values and rounding. Record input version/cutoff.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 28,
+      "title": "[Evidence decision] Dataset control-plane and provenance diagrams",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/28",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence"
+      ],
+      "proposed": "C",
+      "rationale": "Link the grouped control-plane/provenance diagrams, preserving separate holdout, experiment and owner-reviewed promotion paths.",
+      "recommendation": "For slides 5/7 use reviewed examples → separated holdout → candidate artifact → separately reviewed promotion, with provenance IDs underneath. It illustrates the Prove boundary without conflating training and deployment. Existing PDFs are conceptual designs, not measured optimization results.",
+      "sources": [
+        {
+          "title": "Data PDF",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/04-golden-data.pdf"
+        },
+        {
+          "title": "planes",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/05-control-planes.pdf"
+        },
+        {
+          "title": "lineage",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/07-provenance.pdf"
+        }
+      ],
+      "placement": "Slides 5, 7 · reviewed examples → holdout → candidate → separately reviewed promotion",
+      "boundary": "Conceptual/design visual, not measured outcome. Slides 5, 7 · reviewed examples → holdout → candidate → separately reviewed promotion",
+      "verification": "- [ ] Keep reviewed/grouped splits and held-out boundary visible. Separate experiment runner from human-reviewed deployment path; no training or automatic-promotion claim.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 29,
+      "title": "[Evidence decision] Scope lifecycle and approval diagrams",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/29",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence"
+      ],
+      "proposed": "C",
+      "rationale": "Link the grouped identity/lifecycle/approval design references; retain request, grant, execution and terminal-evidence distinctions.",
+      "recommendation": "Across slides 3–5 use one scoped identity/approval state diagram rather than all three PDFs. Distinguish request, grant, execution and terminal evidence; a label or comment is not authority. Directly supports authorized reach/persistence, but these remain design visuals, not deployed enforcement proof.",
+      "sources": [
+        {
+          "title": "Identity PDF",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/01-identity.pdf"
+        },
+        {
+          "title": "lifecycle",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/02-lifecycle.pdf"
+        },
+        {
+          "title": "approval",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/03-approval.pdf"
+        }
+      ],
+      "placement": "Slides 3–5 · identity binding and authorized state transitions",
+      "boundary": "Conceptual/design visual, not measured outcome. Slides 3–5 · identity binding and authorized state transitions",
+      "verification": "- [ ] Preserve canonical identity binding, observation-only external sessions, and actor/scope checks before execution. Do not imply that these public diagrams prove live service operation.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 30,
+      "title": "[CTAN decision] csvsimple: Filter CSV rows and generate tables",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/30",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:tables-metrics"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Generate the artifact index from reviewed JSON with Python's standard library, escaping HTML/Markdown; no TeX CSV dependency.",
+      "recommendation": "Reuse one curated artifact manifest for concise links on slides 5 and 10. P2: a textual-manifest alternative to pgfplotstable, not another mandatory dependency. Escape TeX characters and do not assume database or sorting capabilities.",
+      "sources": [],
+      "placement": "**5, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Use a small curated manifest with long URLs and TeX-special characters. Verify escaping, row filtering and exact link targets without assuming sorting/database features.\n- [ ] AC3 — Given a dated source with a stated denominator, when values enter the table/plot, then units, unknowns, exclusions and cutoff remain visible; conceptual curves carry no invented measured ticks.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 31,
+      "title": "[Evidence decision] Fleet topology and observation diagrams",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/31",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "type:evidence",
+        "priority:P2",
+        "visual:medium",
+        "fit:appendix"
+      ],
+      "proposed": "C",
+      "rationale": "Keep topology/observation references outside the core deck. Concept hosts are not active hosts, and missing observation is unknown.",
+      "recommendation": "A small topology plus observation-state legend belongs in a separate mechanism supplement. Mark hosts as conceptual and separate unknown/stale from failed. Useful persistence detail, but secondary to the ten-slide thesis; silence is not failure and the diagram is not an active-host inventory.",
+      "sources": [
+        {
+          "title": "Topology PDF",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/06-constellation.pdf"
+        },
+        {
+          "title": "observation",
+          "url": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/main/figures/pdf/08-observation.pdf"
+        }
+      ],
+      "placement": "Optional mechanism detail · **concept fleet, not active hosts**; silence does not establish failure",
+      "boundary": "Conceptual/design visual, not measured outcome. Optional mechanism detail · **concept fleet, not active hosts**; silence does not establish failure",
+      "verification": "- [ ] Retain manual-placement/proposed fleet labels. Missing observations mean unknown, not failed; no assertion of active hosts or actual fleet uptime.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 32,
+      "title": "[Evidence decision] Backup-status denominators",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/32",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "priority:P2",
+        "visual:medium",
+        "fit:appendix",
+        "theme:tables-metrics"
+      ],
+      "proposed": "C",
+      "rationale": "Link only the dated denominator example with overlapping-record, exclusions and cutoff warnings.",
+      "recommendation": "Use a dated denominator table in a separate supplement: two baselines, 1,990 overlapping archived records, exclusions. It teaches honest counting, not model capability. Preserve the 2026-10-31 22:58:59 UTC cutoff; records are not unique messages, exclude DMs/attachment bytes and are not billing usage.",
+      "sources": [
+        {
+          "title": "Backup status",
+          "url": "https://newdarwindev.github.io/dots-slackdump-status/"
+        }
+      ],
+      "placement": "Appendix · provenance/denominator example",
+      "boundary": "Snapshot 2026-10-31 22:58:59 UTC: two baselines and 1,990 **overlapping archived records**, not unique messages. Excludes DMs/attachment bytes; not billing usage",
+      "verification": "- [ ] Preserve cutoff2026-10-31T22:58:59Z and explain1990 overlapping archived records across two baselines. Do not label them unique messages, billing usage or complete workspace coverage.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 33,
+      "title": "[CTAN decision] listings: Read source snippets without external highlighter",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/33",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:code"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Use listings for a short literal gate assertion from pinned ecd6c3e source in the evidence deck. The original test file is vendored with provenance.",
+      "recommendation": "On slides 5 or 7 show only 6–10 lines of a real fixture, task schema or acceptance assertion, linked to its exact source. P1: a concrete contract is more useful than generic verbs. Prefer this no-external-highlighter option; use fragile frames and check Unicode.",
+      "sources": [],
+      "placement": "**5, 7**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Compile fragile Beamer frames with the actual excerpt and relevant Unicode. Confirm no external highlighter is required and no assertion is clipped.\n- [ ] AC3 — Given a pinned source excerpt, when the evidence is typeset, then its text and line scope match that source, fit at readable size, and retain the synthetic-fixture qualification; do not imply model-quality results.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 34,
+      "title": "[Evidence decision] Dated pipeline tracker",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/34",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:tables-metrics"
+      ],
+      "proposed": "C",
+      "rationale": "Link only the dated manual tracker snapshot; report zero training/model calls as historical source statements, not current status.",
+      "recommendation": "If linked from slides 7–8, show a visibly dated blocked-state/count table, never a live-status badge. The 2026-10-31 22:41:32 UTC snapshot reports 34 channels, 1,072 records, 19 notebook + 157 consumer tests, zero splits/model calls/training/deployment. Useful provenance, not trained-model evidence.",
+      "sources": [
+        {
+          "title": "Pipeline tracker",
+          "url": "https://newdarwindev.github.io/dots-prompt-tracker-public/"
+        }
+      ],
+      "placement": "Slide 7–8 · dated counts / blocked-state table",
+      "boundary": "**Outdated manual snapshot: 2026-10-31 22:41:32 UTC**. It reports 34 channels, 1,072 records, 19 notebook + 157 consumer tests; splits 0/0/0 and zero real model calls/training/deployments. Not current live status, all-channel totals or model performance",
+      "verification": "- [ ] Recheck the public snapshot timestamp before inclusion. If reused, explicitly retain 2026-10-31T22:41:32Z and counts34/1072/19/157 with zero splits/calls/training/deployments, not live status or model quality.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 35,
+      "title": "[CTAN decision] minted: Pygments-based syntax highlighting",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/35",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "visual:medium",
+        "priority:P3",
+        "theme:code",
+        "fit:defer"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer minted: the readable source excerpt needs neither Pygments nor shell escape.",
+      "recommendation": "If a real multilingual fixture needs richer highlighting on slides 5 or 7, compare it with listings. P3: defer because latexminted/Pygments and execution configuration are not established in current CI. Highlighting is cosmetic, not test proof; do not add both alternatives by default.",
+      "sources": [],
+      "placement": "**5, 7**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Before adoption, document latexminted/Pygments availability and permitted execution setup in the pinned environment. A missing helper is a blocker, not permission to enable unrestricted execution.\n- [ ] AC3 — Given a pinned source excerpt, when the evidence is typeset, then its text and line scope match that source, fit at readable size, and retain the synthetic-fixture qualification; do not imply model-quality results.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 36,
+      "title": "[CTAN decision] fvextra: Verbatim line wrapping and improved formatting",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/36",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:code"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer fvextra: no long receipt/log excerpt currently needs its wrapping features.",
+      "recommendation": "Wrap genuine receipt/schema excerpts legibly on slides 5 or 7 without altering literal contents. P2: use only for actual long log lines. Fragile frames remain necessary; do not shrink type or describe this tagged-PDF-incompatible package as an accessibility fix.",
+      "sources": [],
+      "placement": "**5, 7**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Test a longest literal receipt line and wrapping without altering copied content. Document current tagged-PDF compatibility limitations.\n- [ ] AC3 — Given a pinned source excerpt, when the evidence is typeset, then its text and line scope match that source, fit at readable size, and retain the synthetic-fixture qualification; do not imply model-quality results.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 37,
+      "title": "[Evidence decision] DSPy architecture proposal",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/37",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "type:evidence",
+        "priority:P2",
+        "visual:medium",
+        "fit:appendix"
+      ],
+      "proposed": "C",
+      "rationale": "Link only the proposed architecture source. No deployed system or measured optimization is asserted.",
+      "recommendation": "Use a proposed typed gateway → experiment → holdout → artifact → owner review → GitOps pipeline only in a separate architecture supplement. It fits controlled refinement, but is source-only: no verified hosted app, PDF release or deployment. Label the entire flow proposed.",
+      "sources": [
+        {
+          "title": "DSPy refinery architecture",
+          "url": "https://github.com/newdarwindev/dots-dspy-refinery-architecture"
+        }
+      ],
+      "placement": "Appendix · typed gateway → experiment → holdout → artifact → owner review → GitOps",
+      "boundary": "Source-only proposal; no verified Pages/PDF/release/Actions deployment",
+      "verification": "- [ ] Present only source design and synthetic contract; no deployed Pages/model/service claim. Show review-before-promotion and source-only status beside any architecture view.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 38,
+      "title": "[Evidence decision] Repository sitemap navigation",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/38",
+      "category": "evidence",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:evidence",
+        "theme:navigation"
+      ],
+      "proposed": "A",
+      "rationale": "Provide a concise Paper / Source / Demo / Test evidence index on slide 10; directory membership is not proof of functioning products.",
+      "recommendation": "Slide 10 should expose a compact artifact index: paper, source, demo, evidence, each with revision/status. A small linked grid is more useful than adding many screenshots. The sitemap cutoff is 2026-10-31 22:37; distinguish HTTP, CI and deployment, and never imply directory membership proves a working product.",
+      "sources": [
+        {
+          "title": "Repository sitemap",
+          "url": "https://newdarwindev.github.io/dots-repo-sitemap-public/"
+        }
+      ],
+      "placement": "Slide 10 · portfolio navigation",
+      "boundary": "Dated 2026-10-31 22:37; distinguishes deploy/CI/HTTP. A directory is not proof every product works",
+      "verification": "- [ ] Show cutoff2026-10-31T22:37 and independent CI/deploy/HTTP statuses. Check chosen destination links and never treat a directory entry as functional verification.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 39,
+      "title": "[CTAN decision] latexdiff: Review differences between TeX revisions",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/39",
+      "category": "package",
+      "labels": [
+        "theme:verification",
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:low"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use the PR's native TeX source diff plus before/after rendered contact sheets. No latexdiff/Perl execution path is needed.",
+      "recommendation": "Create a separate reviewer redline of changed claims and wording, reachable from the slide 10 evidence index. P2: useful for editorial audit rather than the audience-facing deck. It is a build-time Perl tool; complex Beamer/TikZ diffs require review and must not replace the final deck.",
+      "sources": [],
+      "placement": "**10 / reviewer artifact**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Generate only a separate review artifact in a later authorized implementation. Confirm changes to claims are visible and TikZ/layout macros do not create misleading redline output.\n- [ ] AC3 — Given a pinned source excerpt, when the evidence is typeset, then its text and line scope match that source, fit at readable size, and retain the synthetic-fixture qualification; do not imply model-quality results.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 40,
+      "title": "[Evidence decision] Storage-fleet synthetic UI",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/40",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "theme:verification",
+        "visual:medium",
+        "priority:P3",
+        "fit:defer"
+      ],
+      "proposed": "D",
+      "rationale": "Defer showcase until deployment/source mismatch and missing evidence route are reconciled; no work in the storage repository is included.",
+      "recommendation": "Defer an evidence showcase until deployment/source mismatch is resolved. If retained as a reference screenshot, label eight computers fictional and preview/cancel/undo simulated. Audited live source is older 383577c; latest 36f0cfc run failed and /evidence/ was 404. Attractive UI is not current fleet proof.",
+      "sources": [
+        {
+          "title": "Storage fleet UI",
+          "url": "https://newdarwindev.github.io/storage-fleet-demo/"
+        }
+      ],
+      "placement": "Optional screenshot · eight fictional computers, preview/cancel/undo",
+      "boundary": "**Live page is an older successful `383577c` deployment. Latest `36f0cfc` Quality-and-Pages run failed; `/evidence/` is 404.** No live fleet, real deletion or latest-CI-pass claim",
+      "verification": "- [ ] Verify live deploy SHA separately from source HEAD. Retain audited383577c live/36f0cfc failed-run distinction and evidence404 unless genuinely reverified; preserve fictional machines and in-memory cleanup.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 41,
+      "title": "[CTAN decision] hyperref: Clickable artifact, source and internal links",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/41",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:navigation"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Configure Beamer's existing hyperref with hypersetup, descriptive evidence links and explicit PDF outline entries; verify PDF annotations.",
+      "recommendation": "Attach descriptive Paper / Source / Demo / Test evidence links beside claims on slides 1, 5, 7 and 10. P0: inspectable evidence is central to the thesis. Configure Beamer’s existing hyperref via hypersetup, then verify actual PDF annotations and destinations; do not reload conflicting options.",
+      "sources": [],
+      "placement": "**1, 5, 7, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Inspect actual PDF link annotations for the selected source/demo/test URLs. Configure the Beamer-loaded package rather than introducing option clashes.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 42,
+      "title": "[Evidence decision] Sidecar infrastructure proposal",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/42",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "type:evidence",
+        "priority:P3",
+        "fit:defer",
+        "visual:low"
+      ],
+      "proposed": "D",
+      "rationale": "Defer reuse until the two-cluster/small-stack design conflict is resolved in its source repository.",
+      "recommendation": "Defer diagram reuse until the old two-cluster narrative is reconciled with the smaller-stack direction. The audited 738c65c material is docs-only; drawing polished infrastructure now risks visually certifying an unresolved design. No deployed infrastructure or new runtime work is implied.",
+      "sources": [
+        {
+          "title": "Sidecar/cloud infrastructure",
+          "url": "https://github.com/newdarwindev/dots-local-sidecar-cloud-infrastructure"
+        }
+      ],
+      "placement": "Deferred architecture appendix",
+      "boundary": "Docs-only at audited `738c65c`; older two-cluster narrative conflicts with newer small-stack direction. Not deployed infrastructure",
+      "verification": "- [ ] Before using, reconcile older two-cluster narrative with small-stack direction, label audited738c65c docs-only state, and leave hardware inventory/deployment unknown. No new infrastructure work in this issue.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 43,
+      "title": "[CTAN decision] bookmark: Structured PDF outline",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/43",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:navigation"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use existing hyperref pdfbookmark anchors for Problem, Mechanism, Evidence and Limits; do not add bookmark.",
+      "recommendation": "Add a meaningful Problem / Mechanism / Evidence / Limits PDF outline across the ten slides. P2: useful for read-alone navigation, but less urgent than direct evidence links. Reuse hyperref anchors; an outline does not improve the underlying proof.",
+      "sources": [],
+      "placement": "**1–10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Open the PDF outline and follow every entry. Avoid duplicate section destinations and stale page targets.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 44,
+      "title": "[Evidence decision] Cloud-onboarding handoff example",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/44",
+      "category": "evidence",
+      "labels": [
+        "theme:architecture",
+        "type:evidence",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium"
+      ],
+      "proposed": "C",
+      "rationale": "Link only the four-gate offline handoff example; no connected-account execution is claimed.",
+      "recommendation": "A four-gate handoff strip can support slides 3/5 as a linked reference, showing exactly where a human acts. Useful authorization example, but source/offline validation is not connected-account execution or a hosted product. Prefer the core contract diagram when space is tight.",
+      "sources": [
+        {
+          "title": "Cloud onboarding",
+          "url": "https://github.com/newdarwindev/cloud-onboarding-demo"
+        }
+      ],
+      "placement": "Slide 3/5 supporting example · four handoff gates and offline validator",
+      "boundary": "Source/checks exist; no connected accounts or hosted product claimed",
+      "verification": "- [ ] Keep public research→owner approval→human handoff→authorized verification gates. Distinguish offline validator checks from provider/account integration.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 46,
+      "title": "[CTAN decision] cleveref: Type-aware figure/table/equation references",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/46",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:low",
+        "theme:navigation"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Use descriptive links and explicit slide/figure names in the review index; no cross-reference automation is needed for ten frames.",
+      "recommendation": "Maintain typed figure/table/equation references in the companion paper or evidence supplement, linked from slides 7 and 10. P2: chiefly a paper-side maintenance aid. Test load order and Beamer label types; it does not discover cross-repository targets.",
+      "sources": [],
+      "placement": "**7, 10 / paper**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Rename/reorder a test figure label in a controlled draft and verify generated reference type/number. Do not confuse internal labels with external-repository discovery.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 48,
+      "title": "[CTAN decision] qrcode: Generate QR code in TeX",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/48",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:navigation"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer until a projection/scanning requirement exists. Ordinary descriptive hyperlinks remain usable and extractable.",
+      "recommendation": "Place one scannable public evidence-index QR code on slide 1 or 10, paired with a descriptive ordinary hyperlink. P2: useful for projection, not a substitute for source links. Test at presentation size; avoid QR clutter and retain text because tagged-PDF compatibility is limited.",
+      "sources": [],
+      "placement": "**1 or 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Scan the actual rendered code at expected display size. Show the same destination as a descriptive ordinary link and retain a non-QR access route.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 50,
+      "title": "[CTAN decision] natbib: Author-year or numeric bibliography",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/50",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "type:ctan",
+        "visual:medium",
+        "theme:navigation"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Reuse references.bib with natbib and the BibTeX pipeline; cite methodological sources on relevant slides, retaining the paper bibliography.",
+      "recommendation": "Add short methodological citations to slides 2, 3, 7 and 10 using the existing paper bibliography. P1: distinguish sourced methods from original hypotheses. Reuse references.bib and the BibTeX pipeline; no Biber migration is justified by this visual task.",
+      "sources": [],
+      "placement": "**2, 3, 7, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Build using the existing references.bib/BibTeX path; no unresolved citations, and every cited claim preserves the paper source’s scope.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 52,
+      "title": "[CTAN decision] xurl: Break long URLs naturally",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/52",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:low",
+        "theme:navigation"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Keep xurl in the paper, and use descriptive hyperlinks in the deck/index so raw long URLs need not be shown.",
+      "recommendation": "Wrap necessary raw URLs in the companion paper or evidence index associated with slide 10. P2: reuse the existing paper package; main slides should keep short descriptive link labels. Avoid exposing long GitHub addresses when a readable label suffices.",
+      "sources": [],
+      "placement": "**10 / companion paper**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Render the longest actual artifact URL and check line breaks/copyability; normal slides should still prefer descriptive hyperlinks.\n- [ ] AC3 — Given the generated PDF, when each relevant hyperlink/reference is activated, then it reaches the intended artifact/target with a meaningful label; inaccessible or changed destinations fail review.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 55,
+      "title": "[CTAN decision] fontspec: Explicit OpenType font selection",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/55",
+      "category": "package",
+      "labels": [
+        "priority:P1",
+        "fit:core",
+        "visual:high",
+        "type:ctan",
+        "theme:typography"
+      ],
+      "proposed": "D1-B",
+      "rationale": "Retain T1/newpxtext/newpxmath and the TeX-bundled monospace family. Avoid stacking fontspec or changing the established font contract.",
+      "recommendation": "Make text and monospace families deliberate and consistent across all slides. P1 is optional font cleanup, not an evidence upgrade. Pin permitted fonts and replace the text-font setup deliberately; do not blindly stack fontspec onto T1/newpxtext. Current XeLaTeX supports this route.",
+      "sources": [],
+      "placement": "**1–10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Resolve the selected fonts in clean CI, preserve licensing and glyph coverage, and remove conflicting legacy text-font setup only as a deliberate later change.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 56,
+      "title": "[CTAN decision] microtype: Protrusion and fine typographic adjustment",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/56",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "priority:P0",
+        "type:ctan",
+        "visual:medium",
+        "theme:typography"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Retain microtype for supported XeTeX protrusion. No claim of XeTeX font expansion or compensation for overcrowding.",
+      "recommendation": "Retain subtle spacing and edge improvements throughout the deck and paper. P0 preserves existing readability with minimal surface area. XeTeX supports protrusion, not font expansion; do not promise features of other engines or use microtype to compensate for overcrowding.",
+      "sources": [],
+      "placement": "**1–10 / paper**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Use only supported XeTeX features; specifically do not claim font expansion. Compare render/logs for substitution warnings.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 57,
+      "title": "[Evidence decision] Public demo template recordings",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/57",
+      "category": "evidence",
+      "labels": [
+        "type:evidence",
+        "theme:verification",
+        "priority:P2",
+        "fit:appendix",
+        "visual:low"
+      ],
+      "proposed": "C",
+      "rationale": "Link only the recording pattern; playback is not inspected here and no autonomous-agent or pixel-diff claim is made.",
+      "recommendation": "A separate supplement may link two desktop/mobile counter recordings as a minimal acceptance-recording pattern. Low visual priority: generic counter UI adds little to the harness thesis. Playback was not inspected in the audit; no pixel-diff or autonomous-agent capability claim.",
+      "sources": [
+        {
+          "title": "Public demo template evidence",
+          "url": "https://newdarwindev.github.io/public-demo-template/evidence/"
+        }
+      ],
+      "placement": "Optional appendix supporting slides 5/7/10; not core",
+      "boundary": "Two synthetic counter recordings; playback not inspected; not pixel-diff testing or autonomous-agent capability",
+      "verification": "- [ ] Inspect selected playback before making interaction claims. Retain two synthetic counter recordings and deployed99e0355 identity; no pixel-diff or autonomous-agent capability claim.\n- [ ] Confirm chosen links still resolve to the reviewed content, record exact revision/cutoff and show the limitation adjacent to the artifact.\n- [ ] Render the affected slide(s) at presentation size, verify legibility and link targets, and preserve the 10-frame/10-page contract unless a separate change is approved.\n- [ ] Record the selected option and rationale without inventing personal role, employment, customer adoption, production deployment, ROI or measured time savings."
+    },
+    {
+      "number": 58,
+      "title": "[CTAN decision] xcolor: Shared semantic palette",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/58",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:typography"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Use native/human/harness/stopped labels and distinct curve styles as redundant cues; keep the established palette.",
+      "recommendation": "Use one stable native / human / harness / stopped palette across slides 3, 4 and 7–9, with redundant text labels and line styles. P0 configures an existing dependency to improve semantic consistency. Check contrast and grayscale; color alone cannot establish accessibility.",
+      "sources": [],
+      "placement": "**3, 4, 7, 8, 9**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Check grayscale and contrast plus text/line-style redundancy. Stop/unknown/verified statuses remain understandable without color.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 59,
+      "title": "[CTAN decision] graphicx: Include/crop PDF and raster graphics",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/59",
+      "category": "package",
+      "labels": [
+        "fit:core",
+        "visual:high",
+        "priority:P0",
+        "type:ctan",
+        "theme:layout"
+      ],
+      "proposed": "D1-A",
+      "rationale": "Use a genuine pinned refinery screenshot and sampled walkthrough still with aspect ratio preserved, capture/provenance dates and synthetic/demo limitations.",
+      "recommendation": "Pair architecture with one genuine, labelled UI screenshot or evidence thumbnail on slides 5, 7 or 10. P0 uses existing graphics support to replace vague claims with inspectable artifacts. Prefer vectors for diagrams; include capture date and synthetic/prototype scope, and never rasterize text paragraphs.",
+      "sources": [],
+      "placement": "**5, 7, 10**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Use a genuine, dated evidence image or vector figure; preserve aspect ratio, capture provenance and synthetic/proposed label. Do not replace paragraphs with raster text.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 60,
+      "title": "[CTAN decision] pdfpages: Select and include pages from other PDFs",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/60",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "theme:layout",
+        "priority:P3",
+        "fit:defer",
+        "visual:low"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer PDF import: the independent HTML evidence supplement supplies links without appending pages to the ten-frame deck.",
+      "recommendation": "If needed, assemble selected companion-paper pages into a separate reviewer packet linked from slide 10. P3: not appropriate inside the fixed ten-slide deck. Verify imported annotations and links; imported appearance does not prove semantic accessibility.",
+      "sources": [],
+      "placement": "**10 / separate evidence appendix**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Keep the ten-page deck unchanged; any review packet is a distinct optional output. Verify retained links/annotations rather than assuming imported pages preserve them.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 61,
+      "title": "[CTAN decision] tagpdf: PDF tagging infrastructure",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/61",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P2",
+        "fit:reference",
+        "visual:medium",
+        "theme:accessibility"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer implementation to a separate pdfLaTeX/LuaLaTeX compatibility study. Keep XeLaTeX; make no PDF/UA claim. Reopen on an engine-migration decision and assistive-technology test plan.",
+      "recommendation": "Investigate semantic reading order and text alternatives across all slides as a separate accessibility track. P2 reflects compatibility work, not low value of accessibility. Current guidance targets pdfLaTeX/LuaLaTeX while CI uses XeLaTeX; no engine migration or PDF/UA compliance is established.",
+      "sources": [],
+      "placement": "**1–10 / accessibility track**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Treat as a separate compatibility/migration investigation: current CTAN guidance targets pdfLaTeX/LuaLaTeX, not current XeLaTeX. No engine change or compliance claim is selected by this issue.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    },
+    {
+      "number": 62,
+      "title": "[CTAN decision] accsupp: Low-level replacement text and abbreviation expansion",
+      "url": "https://github.com/newdarwindev/dots-authorized-agent-workflows-paper/issues/62",
+      "category": "package",
+      "labels": [
+        "type:ctan",
+        "priority:P3",
+        "fit:defer",
+        "visual:low",
+        "theme:accessibility"
+      ],
+      "proposed": "D1-C",
+      "rationale": "Defer until extraction demonstrates a specific missing text equivalent. Provide visible descriptions now; driver-specific replacement text is not whole-document accessibility.",
+      "recommendation": "Consider tested replacement text for diagram labels or link icons only after a concrete extraction problem is demonstrated. P3: experimental driver-specific support is less urgent than visible descriptions. Do not casually combine with tagpdf or claim whole-document accessibility.",
+      "sources": [],
+      "placement": "**Diagram labels / link icons**.",
+      "boundary": "",
+      "verification": "- [ ] AC1 — Record the selected option, rationale, inspected source/package version and any remaining uncertainty.\n- [ ] AC2 — Test driver-specific text equivalents and extraction in an isolated proof before adoption. Do not imply experimental replacement text tags establish whole-document accessibility.\n- [ ] AC3 — Given the produced PDF, when rendered and text-extracted, then headings/body/links remain legible, semantic status is not color-only, and diagrams have a readable textual explanation; appearance alone does not prove accessibility compliance.\n- [ ] AC4 — Render all ten slides, inspect layout at reading size, verify extractable text and the relevant PDF links, and retain the exact 10-page/10-frame XeLaTeX contract.\n- [ ] AC5 — Keep proposal / synthetic prototype / recorded test / production distinctions explicit. No customer adoption, ROI, career, measured improvement or production claim may be inferred from package adoption or demo metrics."
+    }
+  ]
+}

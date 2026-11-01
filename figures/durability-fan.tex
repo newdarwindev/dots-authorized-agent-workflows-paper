@@ -1,16 +1,16 @@
 \begin{tikzpicture}
 \begin{axis}[
-  width=\linewidth,height=6cm,xmin=0,xmax=10,ymin=0,ymax=1,
+  width=\linewidth,height=\ifdefined\SlidePlotHeight\SlidePlotHeight\else 6cm\fi,xmin=0,xmax=10,ymin=0,ymax=1,
   axis lines=left,xtick=\empty,ytick=\empty,
   xlabel={Time and product learning $\longrightarrow$},
   ylabel={Specialist opportunity $\longrightarrow$},
   xlabel style={font=\small},ylabel style={font=\small},
   axis line style={ink!65},clip=false]
 \addplot[draw=teal,line width=1.8pt,smooth] coordinates {(0,.53)(2,.59)(4,.65)(6,.72)(8,.77)(10,.79)};
-\addplot[draw=ochre,line width=1.8pt,smooth] coordinates {(0,.53)(2,.55)(4,.56)(6,.54)(8,.51)(10,.48)};
-\addplot[draw=rust,line width=1.8pt,smooth] coordinates {(0,.53)(2,.48)(4,.39)(6,.28)(8,.18)(10,.10)};
+\addplot[draw=ochre,dashed,line width=1.8pt,smooth] coordinates {(0,.53)(2,.55)(4,.56)(6,.54)(8,.51)(10,.48)};
+\addplot[draw=rust,densely dotted,line width=1.8pt,smooth] coordinates {(0,.53)(2,.48)(4,.39)(6,.28)(8,.18)(10,.10)};
 \node[font=\scriptsize,text=teal,anchor=west] at (axis cs:6.0,.82) {Domain advantage persists};
 \node[font=\scriptsize,text=ochre,anchor=west] at (axis cs:6.0,.57) {Complementary niche};
-\node[font=\scriptsize,text=rust,anchor=west] at (axis cs:5.6,.22) {Provider absorption or closed access};
+\node[font=\scriptsize,text=rust,anchor=west] at (axis cs:.5,.15) {Provider absorbs gap};
 \end{axis}
 \end{tikzpicture}

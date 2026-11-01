@@ -1,0 +1,39 @@
+{
+  "status": "proposed-synthetic-fixture-not-executed",
+  "hosts": [
+    "fixture-host-A",
+    "fixture-host-B"
+  ],
+  "principal": "fixture-owner",
+  "tasks": [
+    {
+      "id": "fixture-A",
+      "host": "fixture-host-A",
+      "grant": "fixture-grant-A",
+      "expected_text": "fixture A accepted\n",
+      "expected_sha256": "6d0df19fe6bb2c00a4d6f828504c1e5297dd7d5fb609eb15bd6e8b433d46b9bb"
+    },
+    {
+      "id": "fixture-B",
+      "host": "fixture-host-B",
+      "grant": "fixture-grant-B",
+      "expected_text": "fixture B accepted\n",
+      "expected_sha256": "6c986aed13019ac530f92855b1c5035170871452f4d36336e31d283f7f5f868d"
+    }
+  ],
+  "receipt_fields": [
+    "task",
+    "principal",
+    "host",
+    "grant",
+    "artifact_sha256",
+    "verifier_verdict"
+  ],
+  "outcomes": [
+    "accepted",
+    "pending",
+    "unknown",
+    "correctly_stopped",
+    "failed"
+  ]
+}

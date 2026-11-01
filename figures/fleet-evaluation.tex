@@ -1,0 +1,15 @@
+% Proposed evaluation only. No deployed hosts or measured results.
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\small]
+\node[anchor=west,font=\small\bfseries] at (0,3.5) {Proposed authorized fleet evaluation};
+\node[draw=ink!40,align=center,minimum width=2.1cm] (request) at (1.1,2.6) {Task + scope\\owner grant};
+\node[draw=teal,align=center,minimum width=2cm] (place) at (4.2,2.6) {Placement\\check actor/scope};
+\node[draw=native,align=center,minimum width=2.7cm] (a) at (8.1,3) {Host A: fixture A\\explicitly authorized};
+\node[draw=native,align=center,minimum width=2.7cm] (b) at (8.1,1.6) {Host B: fixture B\\explicitly authorized};
+\node[draw=ink!40,align=center,minimum width=2cm] (verify) at (4.2,.5) {Receipt +\\independent verifier};
+\draw[->] (request)--(place);
+\draw[->] (place)--(a);
+\draw[->] (place)--(b);
+\draw[->] (a.east)--++(.4,0)|-(verify.east);
+\draw[->] (b.south)--++(0,-.4)-|(verify.north);
+\node[anchor=west,font=\scriptsize,text=rust] at (0,-.25) {Wrong host / missing grant: stop. Lost receipt: unknown; reconcile before retry.};
+\end{tikzpicture}

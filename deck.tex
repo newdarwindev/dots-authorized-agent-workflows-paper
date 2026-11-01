@@ -1,8 +1,11 @@
 \documentclass[aspectratio=169,11pt]{beamer}
 \usepackage[T1]{fontenc}
 \usepackage{newpxtext,newpxmath,microtype}
-\usepackage{tikz,booktabs}
+\usepackage{tikz,booktabs,pgfplots,listings}
+\usepackage[round,authoryear]{natbib}
 \usetikzlibrary{arrows.meta,positioning,calc}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
 \definecolor{ink}{HTML}{172638}
 \definecolor{native}{HTML}{2563A6}
 \definecolor{teal}{HTML}{007F7A}
@@ -14,94 +17,79 @@
 \setbeamercolor{structure}{fg=teal}
 \setbeamerfont{frametitle}{size=\Large,series=\bfseries}
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}{\hfill\color{ink!65}\scriptsize THE AFTERMARKET IMPERATIVE\quad\insertframenumber/10\hspace{1.2em}\vspace{.65em}}
+\setbeamertemplate{footline}{\hfill\color{ink!65}\scriptsize THE AFTERMARKET IMPERATIVE\quad\insertframenumber/\inserttotalframenumber\hspace{1.2em}\vspace{.65em}}
 \setbeamertemplate{itemize item}{\color{teal}\small$\blacktriangleright$}
+\hypersetup{colorlinks=true,urlcolor=native,linkcolor=teal,citecolor=teal,
+ pdftitle={The Aftermarket Imperative},pdfauthor={newdarwindev}}
 \newcommand{\eyebrow}[1]{\textcolor{teal}{\textsf{\scriptsize\bfseries #1}}\par\vspace{.18cm}}
-\newcommand{\takeaway}[1]{\vfill\colorbox{pale}{\parbox{.96\linewidth}{\vspace{.17cm}\textbf{#1}\vspace{.17cm}}}}
+\newcommand{\takeaway}[1]{\vfill\colorbox{pale}{\parbox{.96\linewidth}{\vspace{.13cm}\small\textbf{#1}\vspace{.13cm}}}}
+\newcommand{\scope}[1]{\par\vspace{.15cm}{\scriptsize #1}\par}
+\newcommand{\methodcite}[2]{\href{#1}{\begin{NoHyper}\citep{#2}\end{NoHyper}}}
+\newcommand{\paperlink}{\href{https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf}{Paper + bibliography}}
+\newcommand{\demolink}{\href{https://newdarwindev.github.io/dots-workflow-refinery-demo/}{Synthetic refinery demo}}
+\newcommand{\testlink}{\href{https://github.com/newdarwindev/dots-workflow-refinery-demo/blob/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/tests/flow.spec.js}{Pinned test source ecd6c3e}}
 \title{The Aftermarket Imperative}
 \author{newdarwindev}
 \date{October 2026}
+\providecommand{\variant}{argument}
 \begin{document}
 
 \begin{frame}[plain]
+\pdfbookmark[0]{Problem}{problem}
 \vspace{.65cm}
 \eyebrow{POSITION PAPER / OCTOBER 2026}
 {\fontsize{32}{36}\selectfont\bfseries The Aftermarket\\Imperative}\par
 \vspace{.35cm}
 {\Large Unlocking the work frontier AI will not do by default}\par
 \vfill
-\begin{tikzpicture}
-\fill[native] (0,0) rectangle (3.5,.10);
-\fill[ochre] (3.5,0) rectangle (7,.10);
-\fill[teal] (7,0) rectangle (11.8,.10);
-\end{tikzpicture}\par\vspace{.2cm}
-{\small newdarwindev}
+\textcolor{teal}{\rule{.96\linewidth}{2pt}}\par\vspace{.2cm}
+{\small newdarwindev \hfill \paperlink}
+\scope{Research hypothesis. No new benchmark, market estimate or ROI.}
 \end{frame}
 
-\begin{frame}{The saleable unit is finished work}
+\begin{frame}{An accepted result is the saleable unit}
 \eyebrow{01 / THESIS}
-{\Large Consumer frontier AI can describe valuable work yet leave the user to carry it across tools, time and verification.}\par
-\vspace{.42cm}
 \begin{columns}[T]
-\begin{column}{.47\linewidth}
-\textcolor{native}{\bfseries Default product}\par
-Reasoning, drafts, partial action, and observed stops.
+\begin{column}{.40\linewidth}
+{\large A stock product may leave context, transfers and verification to its user.}\par
+\vspace{.25cm}
+A specialist harness supplies a task contract, permitted reach, persistence and proof.
+\scope{Methods: \methodcite{https://arxiv.org/abs/2307.13854}{webarena}; \methodcite{https://arxiv.org/abs/2403.07718}{workarena}. Historical benchmarks motivate a test; they do not rank this harness.}
 \end{column}
-\begin{column}{.47\linewidth}
-\textcolor{teal}{\bfseries Aftermarket harness}\par
-Task contract, permitted reach, persistence, exception handling and proof.
+\begin{column}{.56\linewidth}
+\def\SlidePlotHeight{3.7cm}\resizebox{\linewidth}{!}{\input{figures/completion-wedge.tex}}
+\scope{Hypothesized delivery gap. Hand-authored curves; no measured lift.}
 \end{column}
 \end{columns}
-\takeaway{Hypothesis: for some non-frontier teams, closing this delivery gap is the highest-leverage commercial research agenda.}
+\takeaway{Claim: a commercial opportunity. Evidence: a position paper. Limit: no comparative result yet.}
 \end{frame}
 
-\begin{frame}{An observed “no” is a diagnosis problem}
+\begin{frame}{An observed stop is a diagnosis problem}
 \eyebrow{02 / BOUNDARY}
-\small
-\begin{tabular}{p{.28\linewidth}p{.62\linewidth}}
-\toprule
-Observed cause & Research or product response\\\midrule
-Model cannot do it & Better capability or a narrower task\\
-Missing context or tool & Supply permitted information and execution path\\
-Missing authorization & Ask the owner for a specific grant or approval\\
-Proper policy or platform stop & Stop, use an allowed route, or hand off\\\bottomrule
-\end{tabular}\par
-\vspace{.38cm}
-{\large A refusal is product behavior. It does not prove hidden model capability.}
-\takeaway{The addressable wedge is legitimate work recovered under the same acceptance rule.}
+\input{slides/diagnosis.tex}
+\scope{Causes may overlap. Refusal is not evidence of hidden capability. Methods: \methodcite{https://arxiv.org/abs/2308.01263}{xstest}; \methodcite{https://arxiv.org/abs/2405.20947}{orbench}.}
 \end{frame}
 
 \begin{frame}{Nudging is hidden labor}
+\pdfbookmark[0]{Mechanism}{mechanism}
 \eyebrow{03 / USER EFFORT}
-\begin{tikzpicture}[x=1cm,y=1cm]
-\draw[ink!25,line width=1pt] (1,2.45)--(11.7,2.45);
-\draw[ink!25,line width=1pt] (1,.75)--(11.7,.75);
-\node[anchor=east,text=ochre,font=\small\bfseries] at (.8,2.45) {Today};
-\node[anchor=east,text=teal,font=\small\bfseries] at (.8,.75) {Harness};
-\foreach \x/\t in {1/Ask,3/Reframe,5/Find context,7/Transfer,9/Approve,11/Check}{\fill[ochre] (\x,2.45) circle(3pt);\node[font=\scriptsize,align=center] at (\x,2.92) {\t};}
-\foreach \x/\t in {1/Ask,7/Managed work,9/Approve,11/Verified}{\fill[teal] (\x,.75) circle(3pt);\node[font=\scriptsize,align=center] at (\x,.25) {\t};}
-\end{tikzpicture}\par
+\resizebox{\linewidth}{!}{\input{figures/nudge-ledger.tex}}
 \vspace{.25cm}
-The goal is to remove repeated tactical steering while retaining decisions that genuinely belong to a person.
-\takeaway{Measure user-active minutes and repair work, not just model calls.}
+Retain owner approvals and independent verification on both paths.
+\scope{Schematic responsibilities, not measured minutes saved. Reframing and context transfer are human work.}
+\takeaway{Measure user-active minutes, reviewer effort and repair work alongside accepted outcomes.}
 \end{frame}
 
 \begin{frame}{A harness is a translation contract}
 \eyebrow{04 / MECHANISM}
-\begin{tabular}{p{.18\linewidth}p{.7\linewidth}}
-\textcolor{teal}{\bfseries Specify} & Convert intent into an observable goal and allowed route.\\[.35cm]
-\textcolor{teal}{\bfseries Reach} & Bind permitted context, tools and accounts to the task.\\[.35cm]
-\textcolor{teal}{\bfseries Persist} & Carry state across waits, retries and exceptions.\\[.35cm]
-\textcolor{teal}{\bfseries Prove} & Verify external effect; report human work and uncertainty.\\
-\end{tabular}
-\takeaway{The base model can stay fixed while the delivery system changes.}
+\input{slides/\variant-mechanism.tex}
 \end{frame}
 
 \begin{frame}{Where a specialist might win}
 \eyebrow{05 / MARKET ENTRY}
 \begin{columns}[T]
 \begin{column}{.49\linewidth}
-\textcolor{teal}{\bfseries Look for}\par\vspace{.12cm}
+\textcolor{teal}{\bfseries Look for}\par
 \begin{itemize}
 \item Recurring, valuable task families
 \item Fragmented permitted context
@@ -110,7 +98,7 @@ The goal is to remove repeated tactical steering while retaining decisions that 
 \end{itemize}
 \end{column}
 \begin{column}{.49\linewidth}
-\textcolor{rust}{\bfseries Be skeptical when}\par\vspace{.12cm}
+\textcolor{rust}{\bfseries Be skeptical when}\par
 \begin{itemize}
 \item A stable API solves it directly
 \item Human judgment is the core work
@@ -119,74 +107,68 @@ The goal is to remove repeated tactical steering while retaining decisions that 
 \end{itemize}
 \end{column}
 \end{columns}
-\vspace{.3cm}
-Credentials, enrollment and authorized defensive work are examples of workflow friction, not proof of a market.
+\scope{Credentials, enrollment and authorized defensive work illustrate workflow friction; they do not establish a market.}
+\takeaway{The commercial opportunity is a hypothesis to test against conventional software and human work.}
 \end{frame}
 
-\begin{frame}{Run the comparison that can fail the thesis}
+\begin{frame}[fragile]{Run the comparison that can fail the thesis}
+\pdfbookmark[0]{Evidence}{evidence}
 \eyebrow{06 / EXPERIMENT}
-\begin{tikzpicture}[x=1cm,y=1cm]
-\foreach \y/\c/\t in {3.2/native/Stock product,2.35/ochre/Expert nudging,1.5/ink/Deterministic integration,.65/teal/Aftermarket harness}{
-\fill[\c!13] (2.3,\y-.28) rectangle (9.0,\y+.28);
-\draw[\c,line width=1.2pt] (2.3,\y-.28)--(2.3,\y+.28);
-\node[anchor=west,font=\small\bfseries] at (2.55,\y) {\t};
-\draw[-{Latex},ink!55] (1.65,\y)--(2.2,\y);
-\draw[-{Latex},ink!55] (9.1,\y)--(9.65,\y);
-}
-\node[align=center,font=\small\bfseries] at (.7,1.9) {Same\\tasks};
-\node[align=center,font=\small\bfseries] at (10.5,1.9) {Same\\verifier};
-\end{tikzpicture}
-\takeaway{Match tasks, permissions and acceptance rules; match the model in stock and harness arms.}
+\input{slides/\variant-experiment.tex}
 \end{frame}
 
 \begin{frame}{Count accepted outcomes, not fluent attempts}
 \eyebrow{07 / ECONOMICS}
 \begin{center}
-{\Large\bfseries Cost per accepted task}\par\vspace{.15cm}
-{\large $=\dfrac{\text{model + tools + human time + support + maintenance}}{\text{independently accepted completions}}$}
+{\large\bfseries Cost per accepted task}\par\vspace{.15cm}
+{\normalsize $=\dfrac{\text{model + tools + human time + support + maintenance}}{\text{independently accepted completions}}$}
 \end{center}
-\vspace{.4cm}
-\begin{columns}[T]
-\begin{column}{.46\linewidth}
-\textbf{Keep separate}\par
-Completed / pending / unknown / correctly stopped.
-\end{column}
-\begin{column}{.46\linewidth}
-\textbf{Expose displacement}\par
-Owner minutes, reviewer minutes, vendor operations and recovery.
-\end{column}
-\end{columns}
-\takeaway{A harness can win technically and lose commercially.}
+\vspace{.18cm}
+\begin{tabular}{p{.26\linewidth}p{.65\linewidth}}
+\toprule
+Outcome & Counting rule\\\midrule
+Accepted & Count only independently verified completions\\
+Pending / unknown & Report separately; reconcile before retry\\
+Correctly stopped & Report as a boundary, not a completion\\\bottomrule
+\end{tabular}
+\scope{No accepted completions: unit cost is undefined, not zero. Report actual spend separately from elapsed time and disclose labor rates.}
+\takeaway{Claim: delivery can create value. Limit: a technical win can still lose commercially.}
 \end{frame}
 
 \begin{frame}{The wedge has a moving boundary}
+\pdfbookmark[0]{Limits}{limits}
 \eyebrow{08 / DURABILITY}
-\begin{tikzpicture}[x=1cm,y=1cm]
-\draw[-{Latex},ink!65] (.5,.5)--(11.6,.5) node[below left,font=\scriptsize]{Time};
-\draw[-{Latex},ink!65] (.5,.5)--(.5,3.9);
-\draw[teal,line width=2pt] (.8,2.0) .. controls (4,2.5) and (7.5,3.3) .. (11,3.35);
-\draw[ochre,line width=2pt] (.8,2.0) .. controls (4,2.15) and (7.5,2.1) .. (11,1.9);
-\draw[rust,line width=2pt] (.8,2.0) .. controls (4,1.8) and (7.5,.9) .. (11,.8);
-\node[anchor=west,text=teal,font=\small\bfseries] at (6.6,3.58) {Domain advantage persists};
-\node[anchor=west,text=ochre,font=\small\bfseries] at (6.4,2.25) {Niche complements provider};
-\node[anchor=west,text=rust,font=\small\bfseries] at (6.0,1.64) {Provider absorbs the gap};
-\end{tikzpicture}\par
-\vspace{.1cm}
-\scriptsize Conceptual scenarios, not observed trajectories. Provider improvements can retire yesterday's scaffolding.
+\begin{columns}[T]
+\begin{column}{.49\linewidth}
+\def\SlidePlotHeight{3.6cm}\resizebox{\linewidth}{!}{\input{figures/amortization.tex}}
+\scope{Conceptual amortization; no measured break-even point or ROI.}
+\end{column}
+\begin{column}{.49\linewidth}
+\def\SlidePlotHeight{3.6cm}\resizebox{\linewidth}{!}{\input{figures/durability-fan.tex}}
+\scope{Conceptual scenarios, not trajectories or forecasts.}
+\end{column}
+\end{columns}
+\scope{Retest after provider upgrades: specialist value may persist, complement the platform, or disappear.}
 \end{frame}
 
 \begin{frame}{The verdict must be earned}
 \eyebrow{09 / RESEARCH AGENDA}
-\begin{enumerate}
-\item Recover permitted stops with the model held fixed.
-\item Reduce tactical nudging against a skilled operator.
-\item Show which harness components cause the gain.
-\item Retest after provider upgrades and on held-out services.
-\item Beat conventional software on full cost per accepted outcome.
-\end{enumerate}
-\vspace{.25cm}
-{\large\bfseries If those tests hold, the aftermarket is a serious commercial research frontier.}
-\vfill
-{\tiny Sources and claim boundaries: see the companion paper and its bibliography. No new benchmark or market estimate is reported here.}
+Test recovery, human effort and component effects with the model held fixed. Retest on held-out services and after upgrades.
+\par
+\vspace{.15cm}
+\small
+\begin{tabular}{p{.37\linewidth}p{.53\linewidth}}
+\toprule
+Artifact & Evidence and limitation\\\midrule
+\paperlink & Position paper; bibliography retained; no new benchmark\\
+\href{https://github.com/newdarwindev/dots-authorized-agent-workflows-paper}{Editable source} & Buildable TeX; source is not deployment evidence\\
+\demolink & Synthetic UI and simulated evaluation\\
+\testlink & Authored assertions; not rerun in this paper\\
+\href{https://newdarwindev.github.io/dots-repo-sitemap-public/}{Dated repository index} & Navigation, not proof that each product works\\\bottomrule
+\end{tabular}
+\scope{See \methodcite{https://arxiv.org/abs/2407.01502}{agentsmatter}. No adoption, production, career, market-size or ROI claim.}
 \end{frame}
+
+% Resolve cited metadata with the same BibTeX source without adding a frame.
+\setbox0=\vbox{\tiny\bibliographystyle{plainnat}\bibliography{references}}
 \end{document}

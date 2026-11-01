@@ -1,6 +1,6 @@
 # Private business API mock
 
-The `mock/` Git submodule pins private repository [dots-paper-workflow-mock](https://github.com/newdarwindev/dots-paper-workflow-mock) at `0463049ffd07cd94e73b9edfc7e7108590e855cf`.
+The `mock/` Git submodule pins private repository [dots-paper-workflow-mock](https://github.com/newdarwindev/dots-paper-workflow-mock) at `de0dd7de282ee5590cfbdd1bd00696c15f56538b`.
 
 It supplies two Go APIs with separate SQLite databases:
 
@@ -54,7 +54,7 @@ clean gitlink and authorized local/private CI execution. D5-A exports only the
 allowlisted synthetic summary; D6-C accepts 14-day Actions artifact expiry.
 D7-C keeps the original functional experiment intact and adds separate service
 measurements. D8-C adds this compact note and summary link without a demonstration
-page. D9-A links the existing [PHP business-action guide (private access required)](https://github.com/newdarwindev/dots-paper-workflow-mock/blob/0463049ffd07cd94e73b9edfc7e7108590e855cf/docs/php-ui-guide.md).
+page. D9-A links the existing [PHP business-action guide (private access required)](https://github.com/newdarwindev/dots-paper-workflow-mock/blob/de0dd7de282ee5590cfbdd1bd00696c15f56538b/docs/php-ui-guide.md).
 D10-B ships one coordinated paper integration PR; merging is a separate action.
 New frontends, model comparisons and real-host experiments remain deferred.
 

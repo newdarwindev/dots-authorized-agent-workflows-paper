@@ -11,6 +11,15 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Validate public mock evidence without private checkout
+        run: |
+          python3 -m venv build/mock-verify
+          build/mock-verify/bin/pip install -r scripts/mock-requirements.txt
+          build/mock-verify/bin/python -m unittest discover -s scripts/tests -v
+          build/mock-verify/bin/python scripts/mock.py verify --summary review/mock-summary.json
+
       - name: Build with the publishing engine
         uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
         with:

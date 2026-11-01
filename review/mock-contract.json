@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "go_version": "go1.26.4",
+  "descriptor_sha256": "e0a2e316396ffe791d9289781b923c11d2973cbc53d1c700d5c5c4f43994c73e",
+  "fixture_sha256": "c7438534cfc1b7f02607ac382fa255a0545406063872864540258316968e41c6"
+}

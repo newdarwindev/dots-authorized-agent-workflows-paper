@@ -83,9 +83,20 @@ The optional [`mock/`](https://github.com/newdarwindev/dots-paper-workflow-mock)
 ```sh
 # From an authorized checkout of this paper repository:
 git submodule update --init -- mock
-cd mock
-go test -race ./...
-go run ./cmd/evaluate -repeats 5 -seed 63 -out reports
+python3 -m venv build/mock-venv
+build/mock-venv/bin/pip install -r scripts/mock-requirements.txt
+build/mock-venv/bin/python scripts/mock.py run --repeats 5 --seed 63
+build/mock-venv/bin/python scripts/mock.py verify --bundle build/mock/run
 ```
 
 The submodule pins a reviewed implementation commit; it does not follow the private repository's branch automatically. See [mock scope, setup and protocol mapping](review/mock-api.md). These checks test synthetic workflows and recovery; they do not establish real fleet capability, model performance or commercial advantage.
+
+The parent-owned command verifies the committed pin and clean source, runs the
+unchanged functional suite and a separate 200-trial HTTP experiment, then checks
+the existing PHP client. Go 1.26.4 and PHP CLI with cURL are required. Generated
+files stay under ignored `build/mock/`.
+
+**Deterministic synthetic simulation:** the [approved outcome summary](review/mock-summary.json)
+is a historical run record. Full evidence is private and retained for 14 days;
+current availability requires authenticated verification and becomes unavailable
+after expiry. See [availability, reproduction and rollback](review/mock-api.md#evidence-availability).

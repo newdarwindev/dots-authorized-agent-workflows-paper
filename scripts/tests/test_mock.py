@@ -72,6 +72,13 @@ class PureTests(unittest.TestCase):
         self.assertFalse(schema['additionalProperties'])
         self.assertNotIn('service_duration_ms',schema['properties'])
 
+    def test_subprocess_keeps_diagnostics_out_of_json(self):
+        with tempfile.TemporaryDirectory() as temp:
+            out, errors = Path(temp)/'output.json', Path(temp)/'diagnostics.log'
+            cli.command([sys.executable, '-c', 'import sys,json; print(json.dumps(dict(status="completed"))); print("diagnostic",file=sys.stderr)'], c.ROOT, out, error_log=errors)
+            self.assertEqual(c.read_json(out)['status'], 'completed')
+            self.assertIn('diagnostic', errors.read_text())
+
     def test_monotonic_deadline(self):
         now=[10.0]
         b=h.Budget(clock=lambda:now[0])

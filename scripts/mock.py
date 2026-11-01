@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run the pinned mock through HTTP, verify private evidence, export a public summary."""
 import argparse
+import contextlib
 import datetime as dt
 import io
 import json
@@ -25,9 +26,9 @@ def utcnow():
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
 
 
-def command(args, cwd, log, env=None, timeout=180):
-    with Path(log).open('wb') as output:
-        subprocess.run([str(x) for x in args], cwd=cwd, stdout=output, stderr=output,
+def command(args, cwd, log, env=None, timeout=180, error_log=None):
+    with Path(log).open('wb') as output, (Path(error_log).open('wb') if error_log else contextlib.nullcontext(output)) as errors:
+        subprocess.run([str(x) for x in args], cwd=cwd, stdout=output, stderr=errors,
                        env=env, check=True, timeout=timeout)
 
 
@@ -79,7 +80,7 @@ def run(args):
         with Stack(bins, out, 'php') as stack:
             env = dict(os.environ, APPLICATION_URL=stack.application.url, AUTOMATION_URL=stack.automation.url)
             command(['php', '-l', ROOT / 'mock/examples/php/workflow.php'], ROOT, out / 'logs/php-lint.log', env)
-            command(['php', ROOT / 'mock/examples/php/workflow.php'], ROOT, out / 'php-smoke.json', env, timeout=60)
+            command(['php', '-d', 'display_errors=stderr', ROOT / 'mock/examples/php/workflow.php'], ROOT, out / 'php-smoke.json', env, timeout=60, error_log=out / 'logs/php-smoke.log')
         c = contract()
         php_version = subprocess.run(['php','-r','echo PHP_VERSION;'], check=True, capture_output=True, text=True).stdout
         manifest = dict(schema_version=1, classification=CLASSIFICATION, parent_source_sha=parent,

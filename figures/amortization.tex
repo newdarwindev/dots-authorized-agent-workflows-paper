@@ -1,16 +1,16 @@
 \begin{tikzpicture}
 \begin{axis}[
-  width=\linewidth,height=6cm,xmin=0,xmax=10,ymin=0,ymax=1,
+  width=\linewidth,height=\ifdefined\SlidePlotHeight\SlidePlotHeight\else 6cm\fi,xmin=0,xmax=10,ymin=0,ymax=1,
   axis lines=left,xtick=\empty,ytick=\empty,
   xlabel={Repeated permitted task volume $\longrightarrow$},
   ylabel={Cost per verified success $\longrightarrow$},
   xlabel style={font=\small},ylabel style={font=\small},
   axis line style={ink!65},clip=false]
-\addplot[draw=ochre,line width=1.8pt,smooth] coordinates {(0,.66)(2,.64)(4,.63)(6,.62)(8,.61)(10,.60)};
+\addplot[draw=ochre,dashed,line width=1.8pt,smooth] coordinates {(0,.66)(2,.64)(4,.63)(6,.62)(8,.61)(10,.60)};
 \addplot[draw=teal,line width=2pt,smooth] coordinates {(0,.95)(1,.75)(2,.61)(3,.52)(4,.46)(6,.38)(8,.34)(10,.32)};
 \draw[ink!45,densely dotted] (axis cs:2,0)--(axis cs:2,.72);
 \node[font=\footnotesize,text=ochre,anchor=west] at (axis cs:6.8,.67) {Manual nudging};
-\node[font=\footnotesize,text=teal,anchor=west] at (axis cs:6.1,.40) {Specialist harness};
+\node[font=\footnotesize,text=teal,anchor=west] at (axis cs:6.1,.48) {Specialist harness};
 \node[font=\scriptsize,text=ink,align=center] at (axis cs:2.2,.17) {Possible\\break-even region};
 \end{axis}
 \end{tikzpicture}

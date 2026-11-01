@@ -1,0 +1,14 @@
+\begin{columns}[T]
+\begin{column}{.57\linewidth}
+\small Literal assertion from the pinned test:\par
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize,breaklines=true,columns=fullflexible]
+await expect(page.getByRole('button',{name:'Continue to evaluation'})).toBeDisabled();
+\end{lstlisting}
+\scope{The gate blocks evaluation before review. Four authored Playwright tests; not DSPy training or model-quality evidence. \testlink}
+\end{column}
+\begin{column}{.39\linewidth}
+\includegraphics[width=\linewidth,height=2.6cm,keepaspectratio]{assets/refinery-walkthrough.png}
+\scope{Actual recorded UI, 00:00.5 of 1.76s. Capture 2026-10-31, ecd6c3e; sampled 2026-11-01.}
+\end{column}
+\end{columns}
+\scope{This synthetic interaction does not execute the four-arm comparison. Match held-out tasks, permissions, model version and independent verifier.}

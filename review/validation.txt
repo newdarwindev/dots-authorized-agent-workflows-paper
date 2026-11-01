@@ -1,0 +1,34 @@
+Local validation — 2026-11-01
+Base source: 88b04652f828514f41c5b51aea44198631066ee0
+Engine: Tectonic 0.16.9
+CI uses the publishing XeLaTeX / TeX Live 2025 toolchain; see PR check for that separate result.
+
+paper.pdf: 20 pages, extractable text, 20 HTTPS links
+deck.pdf: 10 pages, extractable text, 14 HTTPS links
+deck-evidence.pdf: 10 pages, extractable text, 14 HTTPS links
+deck-fleet.pdf: 10 pages, extractable text, 12 HTTPS links
+55 issue dispositions; six wontfix exclusions; literal source and asset hashes verified
+Gallery controls start unselected; local links and fixture hashes verified.
+
+No overfull boxes in any final deck log. All PDF annotations stay on-page.
+Every slide rendered and inspected, including all 20 manuscript pages.
+No external repository tests, fleet benchmark, model calls, deployment or production verification executed.
+Actual validation commands:
+python scripts/review.py
+python scripts/verify.py
+python scripts/render.py
+
+Installed local package metadata from final deck.log:
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+Package: xxcolor 2003/10/24 ver 0.1
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+Package: newpxtext 2022/01/30 v1.504(Michael Sharpe) latex and unicode latex su
+Package: newpxmath 2021/12/04 v1.5
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+
+HTTP HEAD checks: 33 links, 33 returned 200. Reachability only.

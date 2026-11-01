@@ -6,6 +6,47 @@ An original 20-page position paper and 10-slide Beamer presentation by newdarwin
 - [Paper PDF](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/paper.pdf)
 - [Beamer PDF](https://newdarwindev.github.io/dots-authorized-agent-workflows-paper/deck.pdf)
 
+## Review the open-issue variations
+
+The [decision index](review/decisions.md) covers 55 open planning, evidence and
+package decisions. Issues #45, #47, #49, #51, #53 and #54 are labeled wontfix
+and are excluded. Every included issue has a proposed disposition, rationale,
+alternatives and unchecked selection boxes. Retaining an existing feature or
+deferring an unnecessary dependency is an explicit decision.
+
+Three complete ten-page decks share the argument and differ on slides 5 and 7:
+
+| Option | Source | Preview |
+| --- | --- | --- |
+| Argument (proposed default) | [deck.tex](deck.tex) | [PDF](docs/review/argument.pdf) |
+| Synthetic evidence | [deck-evidence.tex](deck-evidence.tex) | [PDF](docs/review/evidence.pdf) |
+| Proposed fleet evaluation | [deck-fleet.tex](deck-fleet.tex) | [PDF](docs/review/fleet.pdf) |
+
+Open [the local review gallery](docs/review/index.html) after downloading the
+repository, or review the PR's embedded previews and checkboxes. Gallery controls
+are previews only; save preferences in the PR. Choose one variant and one option
+per issue (one per D1/D2/D3 for #1); resolve conflicting choices before merging.
+Checking a box does not run code or change the source. The proposed default is
+argument; to adopt another option, change the default variant in deck.tex before
+merging and rebuild all outputs.
+
+The [fleet protocol](review/fleet-protocol.md) is a proposed, unrun comparison.
+The [asset provenance](assets/provenance.json) pins the genuine synthetic-demo
+images and test source. The [HTTP checks](review/link-checks.json) record
+reachability separately from the earlier content audit, runtime/CI and playback.
+No tests in other repositories were rerun.
+
+After building paper.tex and all three deck entrypoints into build, regenerate
+and check the review with:
+
+    python3 scripts/review.py
+    python3 scripts/verify.py
+    python3 scripts/render.py
+
+Verification needs pypdf 5.9.0; rendering needs Pillow 12.0.0 and Poppler.
+The PR workflow builds every option with the same XeLaTeX/TeX Live 2025 contract
+as publication and retains every page render, PDF and log as an artifact.
+
 ## Argument
 
 The paper argues that a high-leverage commercial research opportunity for some teams outside frontier laboratories is **aftermarket harness engineering**: making consumer-accessible frontier AI products complete valuable, legitimate work they currently decline or leave unfinished without repeated user nudging. The saleable unit is an independently accepted task result. The claim that this is the *greatest* opportunity is an argued hypothesis, not an empirical ranking.

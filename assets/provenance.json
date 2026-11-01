@@ -1,0 +1,26 @@
+[
+  {
+    "path": "assets/refinery-review.png",
+    "source": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/artifacts/review.png",
+    "source_date": "2026-10-31",
+    "retrieved": "2026-11-01",
+    "sha256": "17dc333641850dfb9e5aebd7a49071474ebbc8e31a405a454ec60d2d9f4ece27",
+    "note": "Screenshot unchanged; video sampled at 00:00.5 of 1.76 seconds; tests copied as source and not rerun. Synthetic UI; simulated evaluation."
+  },
+  {
+    "path": "assets/refinery-walkthrough.png",
+    "source": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/artifacts/workflow-walkthrough.webm",
+    "source_date": "2026-10-31",
+    "retrieved": "2026-11-01",
+    "sha256": "ee2f8bdc050df84e19a975b79e2d5043b82ba2ac438b020fb352a8d699dfbb26",
+    "note": "Screenshot unchanged; video sampled at 00:00.5 of 1.76 seconds; tests copied as source and not rerun. Synthetic UI; simulated evaluation."
+  },
+  {
+    "path": "review/sources/refinery-flow.spec.js",
+    "source": "https://raw.githubusercontent.com/newdarwindev/dots-workflow-refinery-demo/ecd6c3eda92d442b983d5c6d1d40435442f8a49a/tests/flow.spec.js",
+    "source_date": "2026-10-31",
+    "retrieved": "2026-11-01",
+    "sha256": "06f281df73e4d7744fa1c8cd5236e0762ecf93f47c7e786afa30d59494173fe1",
+    "note": "Screenshot unchanged; video sampled at 00:00.5 of 1.76 seconds; tests copied as source and not rerun. Synthetic UI; simulated evaluation."
+  }
+]

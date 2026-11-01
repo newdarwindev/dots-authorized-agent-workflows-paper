@@ -1,0 +1,44 @@
+name: Verify paper and all deck variations
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build with the publishing engine
+        uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b
+        with:
+          root_file: |
+            paper.tex
+            deck.tex
+            deck-evidence.tex
+            deck-fleet.tex
+          texlive_version: '2025'
+          os: debian
+          latexmk_use_xelatex: true
+      - name: Verify PDFs and generate review previews
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+          python3 -m venv build/verify-venv
+          build/verify-venv/bin/pip install pypdf==5.9.0 Pillow==12.0.0
+          python3 scripts/review.py
+          git diff --exit-code -- review/decisions.md docs/review/index.html
+          build/verify-venv/bin/python scripts/verify.py --pdf-dir .
+          build/verify-venv/bin/python scripts/render.py --pdf-dir .
+      - name: Retain all page renders, PDFs and TeX logs
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: paper-and-variation-review
+          path: |
+            docs/review
+            build/render
+            *.log
+            *.blg

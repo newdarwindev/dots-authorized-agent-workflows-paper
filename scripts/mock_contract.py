@@ -258,7 +258,8 @@ def _verify_bundle(bundle, root=ROOT):
                 for key, field in [('recovered','recovered'), ('fault_injected','fault_injected'), ('placement_correct','placement_correct')]:
                     require(report['summary'][condition][key] == sum(t[field] for t in report['trials'] if t['condition'] == condition), 'Functional recovery aggregate mismatch')
                 require(report['summary'][condition]['cost_per_accepted'] is None, 'Invented cost')
-            csv_rows = list(csv.DictReader((bundle / 'functional/trials.csv').open()))
+            with (bundle / 'functional/trials.csv').open() as csv_file:
+                csv_rows = list(csv.DictReader(csv_file))
             require(len(csv_rows) == len(report['trials']), 'Functional CSV denominator mismatch')
             for a, b in zip(csv_rows, report['trials']):
                 for key, value in a.items():
